@@ -1,2 +1,42 @@
+### NOTE: This checklist does not represent all known workflows. It is a WIP and additions are welcome.
 
-<!DOCTYPE html><html><body><ul><li>Generate&nbsp;Wallet<ul><li>Keystore<ul><li>Stage&nbsp;1<ul><li>Password&nbsp;should&nbsp;be&nbsp;at&nbsp;least&nbsp;9&nbsp;characters<ul><li>Create&nbsp;New&nbsp;Wallet&nbsp;button&nbsp;is&nbsp;disabled&nbsp;when&nbsp;not&nbsp;valid</li></ul></li><li>Eye&nbsp;toggle&nbsp;shows/hides&nbsp;password</li></ul></li><li>Stage&nbsp;2<ul><li>Continue&nbsp;button&nbsp;is&nbsp;disabled&nbsp;until&nbsp;keystore&nbsp;is&nbsp;downloaded</li></ul></li><li>Stage&nbsp;3<ul><li>Private&nbsp;key&nbsp;is&nbsp;valid,&nbsp;does&nbsp;not&nbsp;contain&nbsp;0x&nbsp;prefix</li><li>Print&nbsp;paper&nbsp;wallet&nbsp;shows&nbsp;both&nbsp;address&nbsp;and&nbsp;private&nbsp;key&nbsp;in&nbsp;QR&nbsp;and&nbsp;string&nbsp;format<ul><li>Test&nbsp;scanning&nbsp;both&nbsp;address&nbsp;and&nbsp;private&nbsp;key&nbsp;QR&nbsp;code&nbsp;to&nbsp;ensure&nbsp;matches&nbsp;up&nbsp;with&nbsp;text&nbsp;private&nbsp;key</li></ul></li></ul></li><li>Stage&nbsp;4<ul><li>Unlock&nbsp;takes&nbsp;you&nbsp;to&nbsp;send&nbsp;view</li></ul></li></ul></li><li>Mnemonic<ul><li>Stage&nbsp;1<ul><li>Regenerate&nbsp;shows&nbsp;new&nbsp;wordslist</li></ul></li><li>Stage&nbsp;2<ul><li>Eye&nbsp;toggle&nbsp;shows&nbsp;word,&nbsp;but&nbsp;still&nbsp;requires&nbsp;each&nbsp;of&nbsp;the&nbsp;12&nbsp;words&nbsp;to&nbsp;be&nbsp;typed&nbsp;in&nbsp;manually</li></ul></li><li>Stage&nbsp;3<ul><li>Unlock&nbsp;takes&nbsp;you&nbsp;to&nbsp;send&nbsp;view</li></ul></li><li>Misc:<ul><li>12&nbsp;word&nbsp;mnemonic&nbsp;should&nbsp;be&nbsp;compatible&nbsp;with&nbsp;MetaMask.&nbsp;</li><li>Attempt&nbsp;to&nbsp;import&nbsp;mnemonic&nbsp;into&nbsp;metamask&nbsp;and&nbsp;ensure&nbsp;compatability</li></ul></li></ul></li></ul></li><li>Send<ul><li>Functionality:&nbsp;https://github.com/MyEtherWallet/MyEtherWallet/issues/482</li><li>Promos<ul><li>Ensure&nbsp;coinbase&nbsp;widget&nbsp;works</li><li>Ensure&nbsp;Bity&nbsp;referral&nbsp;works</li><li>Ensure&nbsp;Trezor/Ledger&nbsp;Promo&nbsp;links&nbsp;to&nbsp;knowledgebase</li></ul></li><li>Tokens<ul><li>Ensure&nbsp;resolution&nbsp;of&nbsp;https://github.com/MyEtherWallet/MyEtherWallet/issues/704&nbsp;is&nbsp;used&nbsp;for&nbsp;token&nbsp;testing</li></ul></li></ul></li><li>Swap<ul><li>When&nbsp;ShapeShift&nbsp;unavailable,&nbsp;bity&nbsp;pairs&nbsp;continue&nbsp;to&nbsp;work</li><li>When&nbsp;Bity&nbsp;unavailable,&nbsp;shapeshift&nbsp;pairs&nbsp;continue&nbsp;to&nbsp;work</li><li>Send-lite<ul><li>When&nbsp;origin&nbsp;balance&nbsp;is&nbsp;smaller&nbsp;than&nbsp;amount&nbsp;required&nbsp;for&nbsp;transfer,&nbsp;and&nbsp;origin&nbsp;kind&nbsp;is&nbsp;ether/token,&nbsp;show&nbsp;warning&nbsp;/&nbsp;prevent&nbsp;transfer.</li></ul></li></ul></li><li>Mobile<ul><li>https://www.reddit.com/r/ethtrader/comments/7h8eob/crosspost_nano_s_wallet_now_works_with/?st=JAQYKG8Q&amp;sh=c2ef6289)&nbsp;should&nbsp;continue&nbsp;to&nbsp;work&nbsp;on&nbsp;V4.</li></ul></li></ul></body></html>
+
+* Generate Wallet
+    - Keystore
+        - Stage 1
+            Password should be at least 9 characters
+                Create New Wallet button is disabled when not valid
+            Eye toggle shows/hides password
+        - Stage 2
+            Continue button is disabled until keystore is downloaded
+        - Stage 3
+            Private key is valid, does not contain 0x prefix
+            Print paper wallet shows both address and private key in QR and string format
+                Test scanning both address and private key QR code to ensure matches up with text private key
+        - Stage 4
+            Unlock takes you to send view
+    - Mnemonic
+        - Stage 1
+            Regenerate shows new wordslist
+        - Stage 2
+            Eye toggle shows word, but still requires each of the 12 words to be typed in manually
+        - Stage 3
+            Unlock takes you to send view
+        - Misc:
+            12 word mnemonic should be compatible with MetaMask. 
+            Attempt to import mnemonic into metamask and ensure compatability
+* Send
+    - Functionality Testing: https://github.com/MyEtherWallet/MyEtherWallet/issues/482
+    - Promos
+        - Ensure coinbase widget works
+        - Ensure Bity referral works
+        - Ensure Trezor/Ledger Promo links to knowledgebase
+    - Tokens
+        - Ensure resolution of https://github.com/MyEtherWallet/MyEtherWallet/issues/704 is used for token testing
+* Swap
+    - When ShapeShift unavailable, bity pairs continue to work
+    - When Bity unavailable, shapeshift pairs continue to work
+    - Send-lite
+        - When origin balance is smaller than amount required for transfer, and origin kind is ether/token, show warning / prevent transfer.
+* Mobile
+    - https://www.reddit.com/r/ethtrader/comments/7h8eob/crosspost_nano_s_wallet_now_works_with/?st=JAQYKG8Q&sh=c2ef6289 should continue to work on V4.
