@@ -41,7 +41,7 @@ npm run build:downloadable
 
 Zip up the folder created by this build, and that's it. It runs standalone.
 
-## Electron
+## Electron <sup>(Not yet implemented)</sup>
 
 ### Building
 
