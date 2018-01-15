@@ -1,4 +1,6 @@
-## Release Process
+# Release Process
+
+## General Notes
 
 1. Release Frequency 
 Releases will be published every other Monday. Holidays and extenuating circumstances will result in delayed releases.
@@ -18,7 +20,44 @@ Releases will be published every other Monday. Holidays and extenuating circumst
     - QA Lead's approval will be required for merging "dist" patches to both staging and production.
     - An approval by at least one other non-maintainer will be required for merge. 
 
+## Production Site Build
 
-  
-  
-  
+To create the production site build that's meant to run behind a web server, run
+```
+npm run build
+```
+This folder can be hosted anywhere as-is. It must be run as the root of a site, so `xyz.com` or `subdomain.xyz.com`, NOT `xyz.com/mew`.
+
+## HTML Build
+
+### Building
+
+To create the downloadable HTML version of the site, run
+```
+npm run build:downloadable
+```
+
+### Releasing
+
+Zip up the folder created by this build, and that's it. It runs standalone.
+
+## Electron
+
+### Building
+
+To create the Electron build(s), run
+```
+npm run build:electron
+```
+This will build Electron against all 3 platforms (OSX, Windows, Linux). Currently this process only works on OSX, as it can build Windows and Linux, but they cannot build OSX. Hopefully this gets moved to CI soon
+
+### Releasing
+
+A lot of files will be generated from the build, but you'll only want to upload the following files to the release:
+  * MyEtherWallet-[version]-mac.zip (OSX)
+  * MyEtherWallet-setup-[version].exe (Windows)
+  * MyEtherWallet-setup-[version].blockmap (Windows)
+  * MyEtherWallet-[version]-x86_64.AppImage (Linux)
+  * latest-mac.yml (OSX)
+  * latest-linux.yml (Linux)
+  * latest.yml (Windows)
