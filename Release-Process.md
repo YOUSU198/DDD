@@ -1,7 +1,5 @@
 # Release Process
 
-## General Notes
-
 1. Release Frequency 
 Releases will be published every other Monday. Holidays and extenuating circumstances will result in delayed releases.
      - A staggered release schedule with a release candidate published live for 1 week before "full" release will be employed to allow relatively wide-scale testing 
@@ -19,6 +17,8 @@ Releases will be published every other Monday. Holidays and extenuating circumst
     - QA lead will be made a "code owner" on both the staging and production repo's as described in https://github.com/MyEtherWallet/MyEtherWallet/issues/499. 
     - QA Lead's approval will be required for merging "dist" patches to both staging and production.
     - An approval by at least one other non-maintainer will be required for merge. 
+
+<br/>
 
 ## Production Site Build
 
