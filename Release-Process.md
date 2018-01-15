@@ -54,7 +54,7 @@ This will build Electron against all 3 platforms (OSX, Windows, Linux). Currentl
 ### Releasing
 
 A lot of files will be generated from the build, but you'll only want to upload the following files to the release:
-  * MyEtherWallet-[version]-mac.zip (OSX)
+  * MyEtherWallet-[version]-mac.zip (**not the dmg**) (OSX)
   * MyEtherWallet-setup-[version].exe (Windows)
   * MyEtherWallet-setup-[version].blockmap (Windows)
   * MyEtherWallet-[version]-x86_64.AppImage (Linux)
