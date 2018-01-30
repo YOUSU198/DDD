@@ -1,1 +1,1 @@
-Welcome to the MyEtherWallet wiki!
+Welcome to the MyCrypto wiki!
