@@ -14,7 +14,7 @@ Releases will be published every other Monday. Holidays and extenuating circumst
 3. Release Validation / Release Approval
     - A QA Lead will be designated to validate releases before publishing to the beta channel. 
         - Release validation will include manual testing of user-facing functionality via workflow checklists, as well as static analysis on the the build. 
-    - QA lead will be made a "code owner" on both the staging and production repo's as described in https://github.com/MyEtherWallet/MyEtherWallet/issues/499. 
+    - QA lead will be made a "code owner" on both the staging and production repo's as described in https://github.com/MyCryptoHQ/MyCrypto/issues/499. 
     - QA Lead's approval will be required for merging "dist" patches to both staging and production.
     - An approval by at least one other non-maintainer will be required for merge. 
 
