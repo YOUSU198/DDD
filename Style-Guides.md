@@ -264,7 +264,7 @@ export * from './actionTypes';
 
 ## Styling
 
-MyEtherWallet uses Bootstrap for its base styles. We're still on version 3.3, so if you're looking for docs, you'll need to refer to [the old ones here](getbootstrap.com/docs/3.3/css/).
+MyCrypto uses Bootstrap for its base styles. We're still on version 3.3, so if you're looking for docs, you'll need to refer to [the old ones here](getbootstrap.com/docs/3.3/css/).
 
 Custom styles are written in SCSS (Not pure SASS, for backwards compatibility.) Most styles are limited to the component they style. They're inside of a file that shares the name of the component in the same folder. A typical styled component would look something like:
 
