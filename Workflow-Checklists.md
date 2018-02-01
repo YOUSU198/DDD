@@ -26,13 +26,13 @@
             - 12 word mnemonic should be compatible with MetaMask. 
             - Attempt to import mnemonic into metamask and ensure compatability
 * Send
-    - Functionality Testing: https://github.com/MyEtherWallet/MyEtherWallet/issues/482
+    - Functionality Testing: https://github.com/MyCrypto/MyCrypto/issues/482
     - Promos
         - Ensure coinbase widget works
         - Ensure Bity referral works
         - Ensure Trezor/Ledger Promo links to knowledgebase
     - Tokens
-        - Ensure resolution of https://github.com/MyEtherWallet/MyEtherWallet/issues/704 is used for token testing
+        - Ensure resolution of https://github.com/MyCrypto/MyCrypto/issues/704 is used for token testing
 * Swap
     - When ShapeShift unavailable, bity pairs continue to work
     - When Bity unavailable, shapeshift pairs continue to work
