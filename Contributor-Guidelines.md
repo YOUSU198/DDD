@@ -15,6 +15,9 @@ at [@MyCrypto](https://twitter.com/mycrypto).
 
 ---
 
+<br/>
+<br/>
+
 ## Getting Support
 
 If you're having a problem with the site that you do not believe to be a bug
