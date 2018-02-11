@@ -1,5 +1,3 @@
-# MyCrypto Contribution Guidelines
-
 Thanks for showing interest in contributing to MyCrypto! Here are some basic
 guides for how to best help out, depending on how you're looking to contribute.
 
