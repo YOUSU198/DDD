@@ -11,9 +11,10 @@ If your contribution doesn't fit in to those, feel free to send us an email
 at [support@mycrypto.com](mailto:support@mycrypto.com) or hit us up on Twitter
 at [@MyCrypto](https://twitter.com/mycrypto).
 
+<br/>
+
 ---
 
-<br/>
 <br/>
 
 ## Getting Support
