@@ -1,6 +1,7 @@
 # Release Process
 
-1. Release Frequency 
+1. Release Frequency
+
 Releases will be published every other Monday. Holidays and extenuating circumstances will result in delayed releases.
      - A staggered release schedule with a release candidate published live for 1 week before "full" release will be employed to allow relatively wide-scale testing 
          - Holidays / extenuating circumstances resulting in delayed beta releases will result in a similarly delayed production release to ensure that the beta release candidate is live for at least 1 week.
