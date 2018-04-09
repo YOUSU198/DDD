@@ -3,9 +3,12 @@
 1. Release Frequency
 
 Releases will be published every other Monday. Holidays and extenuating circumstances will result in delayed releases.
-     - A staggered release schedule with a release candidate published live for 1 week before "full" release will be employed to allow relatively wide-scale testing 
-         - Holidays / extenuating circumstances resulting in delayed beta releases will result in a similarly delayed production release to ensure that the beta release candidate is live for at least 1 week.
-     - A Header/Banner with solicitation for feedback via GitHub and Email will be shown on the beta site to ensure users are aware on how to provide feedback.
+     
+- A staggered release schedule with a release candidate published live for 1 week before "full" release will be employed to allow relatively wide-scale testing 
+        
+ - Holidays / extenuating circumstances resulting in delayed beta releases will result in a similarly delayed production release to ensure that the beta release candidate is live for at least 1 week.
+    
+ - A Header/Banner with solicitation for feedback via GitHub and Email will be shown on the beta site to ensure users are aware on how to provide feedback.
 
 2. Release Notes
     - At a minimum, summarized release notes via [dternyak/GitHub-Project-Management](https://github.com/dternyak/GitHub-Project-Management) will be released alongside new releases.
