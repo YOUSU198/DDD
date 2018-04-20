@@ -1,7 +1,7 @@
 # MyCrypto Audit
 
 ### Cure53
-Cure53 worked in conjunction with the team of MyCrypto to audit our codebase and release strategy.
+Cure53 worked in conjunction with the MyCrypto team to audit our codebase and release management strategy.
 This audit was performed at the hash `93852bb` and release [0.1.0](https://github.com/MyCryptoHQ/MyCrypto/releases/tag/0.1.0) on 01/24/18.
 
 
