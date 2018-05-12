@@ -100,7 +100,10 @@
     - Ensure that it links to the correct support article: https://support.mycrypto.com/transactions/what-is-nonce.html
     - Ensure that the refresh button for Nonce works
     - Ensure that you can’t put in weird values into the boxit using the **Sign & Verify Message** tab.
-        - Step 8
+       
+---
+
+ - Step 8
             - Broadcast the signed message from Step 7 using the **Broadcast Transaction** tab.
         - Step 9
             - Copy the transaction ID, and look up the status using the **Tx Status** tab
@@ -115,7 +118,7 @@
                 - Ensure resolution of https://github.com/MyCryptohq/MyCrypto/issues/704 is used for token testing
 
 
-* **Create New Wallet Tab**
+**Create New Wallet Tab**
 
     - Keystore
         - Stage 1
