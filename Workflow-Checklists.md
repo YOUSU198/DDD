@@ -17,7 +17,7 @@
     * Ensure that the wallet unlocks correctly
 
 
-## Once wallet is unlocked: 
+## Once wallet is unlocked with MetaMask: 
 1. Check under “Account Address” that the address matches with the address shown in MetaMask 
     - Check that “copy address” copies address to clipboard
     - Ensure that Account Balance is correct - check on Etherscan.io
