@@ -58,7 +58,7 @@
     - Check that you can indeed delete the custom token from the interface
         - Check that you can re-add the token
 
-## Send Ether & Tokens Tab
+## Send Ether & Tokens Tab: Wallet Unlocked with MetaMask
 1. Verify that you can enter an address into the “To Address” field
     - Ensure that only a valid ETH address is accepted 
     - Invalid addresses - the box is outlined in red
