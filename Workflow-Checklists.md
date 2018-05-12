@@ -1,23 +1,105 @@
 ### NOTE: This checklist does not represent all known workflows. It is a WIP and additions are welcome.
 
-* **View & Send Tab**
 
-    - Access wallet
-        - Step 1
-            - Verify that each **Access Wallet** button transitions to the next step correctly.
-        - Step 2
-            - Access account through each access method.
-        - Step 3
-            - Verify that the Advanced settings opens correctly.
-        - Step 4
-            - Ensure that **Scan for Tokens** button functions correctly. If it fails, test the **Retry** button.
-        - Step 5
-            - Verify that the calculated wallet values below the token scanner are reasonable.
-        - Step 6
-            - Create a new transaction to yourself using one of the non-hardware wallet access methods and click the **Send Transaction** button
-        - Step 7
-            - Create a new tab in your browser and navigate to: https://beta.mycrypto.com/sign-and-verify-message/sign.
-            - Grab the text from the *Raw Data* text field from the transaction and verify that it is correct by signing it using the **Sign & Verify Message** tab.
+# View & Send Tab
+
+## MetaMask
+1. Verify that it says “Connect & sign via your browser or extension”
+    * Mousing over the MetaMask box should make it “pop” and change MetaMask title color to blue
+    * Check that mousing over the bottom right corner symbols show pop up text
+        * Shield: “This wallet type is secure”
+        * Question Mark: “More info”
+            * Check that the Question Mark links to the correct page: https://support.mycrypto.com/migration/moving-from-private-key-to-metamask
+2. Verify that clicking MetaMask will transition to the correct page
+3. Verify that the “Download MetaMask” button works (https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en)
+4.  Verify that you can go back to homepage with “Change Wallet” link in left corner
+5. Verify that the “Connect to MetaMask” button works 
+    * Ensure that the wallet unlocks correctly
+
+
+## Once wallet is unlocked: 
+1. Check under “Account Address” that the address matches with the address shown in MetaMask 
+    - Check that “copy address” copies address to clipboard
+    - Ensure that Account Balance is correct - check on Etherscan.io
+    - Ensure that the refresh balance button works
+    - Check that the “Transaction history” links work
+        - Tokens can be accessed by Etherscan and Etherchain
+    - Check the Widget 
+        - Ensure that it transitions to all 3 ads
+            - On its own and on a timer 
+            - Ensure that all the ads open up in a new window
+        1. Ad: Trezor/ledger: https://support.mycrypto.com/getting-started/protecting-yourself-and-your-funds.html 
+        2. Ad: Coinbase: https://buy.coinbase.com/?code=60c05061-3a76-57be-b1cd-a7afa97bcb8c&address=0x9A2617927f187B4D631DBe29B04062b0F7bb24af&crypto_currency=ETH&currency=USD 
+        3. Shapeshift: https://beta.mycrypto.com/swap
+2. Check Token Balances:
+    - Ensure that “Scan For Tokens” button works
+        - Verify that you can check and uncheck tokens that you wish to keep track of
+        - Check that the “Save” button works and actually saves the tokens you checked
+3. Verify that the “Add Custom Token” works
+    - Ensure that it expands current box with 3 input boxes for information 
+        1. Token Symbol
+            - Ensure that it accepts a combination of numbers and letters
+                - Check that when you enter a valid Token Symbol that the box highlights to green
+                - Check that when you enter an already existing token that you are given the error "A token with this symbol already exists"
+        2. Address
+            - Ensure that it only accepts a valid Address/Contract address
+                - Red box highlight if address is invalid
+                - Green box highlight if address is valid
+        3. Decimals
+            - Ensure that it only accepts numbers
+            - Red box highlight if letters are entered
+            - Green box highlight if address if its only numbers
+            - Verify that any other weird value is shown as invalid
+    - Check that the “Cancel” button indeed cancels the process of adding a new Token and closes the expanded box
+    - Check that the link for “Need help?” works: https://support.mycrypto.com/tokens/adding-new-token-and-sending-custom-tokens.html
+    - Verify that adding a token with all correct information works 
+        - Correct token appears with correct balance
+        - Verify you can’t add 2 of the same tokens
+    - Check that you can indeed delete the custom token from the interface
+        - Check that you can re-add the token
+
+## Send Ether & Tokens Tab
+1. Verify that you can enter an address into the “To Address” field
+    - Ensure that only a valid ETH address is accepted 
+    - Invalid addresses - the box is outlined in red
+    - Valid addresses - the box is outlined green
+    - Ensure that the To Address Icon is also correct and matches with the address receiving
+2. Verify that you can only type in positive integers into the “Amount” field
+3. Verify that you can toggle from ETH to tokens
+    - Verify that toggling from different coins refreshes the “Amount” field
+4. For sending Ether
+    - Ensure that the “send all button” (shown as 2 upward arrows) actually inputs complete ETH account balance
+    - Ensure that you can send whole numbers and fractions of ETH
+    - Ensure that typing in a number that is more than ETH in the wallet is not allowed
+    - Ensure that adding past 18 decimals is not allowed
+    - Make sure nothing else weird is allowed to be inputted
+5. For sending a Token
+    - Ensure that the “send all button” (shown as 2 upward arrows) actually inputs complete Token account balance
+    - Ensure that you can send whole numbers and fractions of Tokens 
+        - Check that tokens with different decimals follow their own rules (some tokens don’t allow fractions to be sent)
+        - Ensure that the decimal places follow the Token’s correct decimal places
+    - Ensure that typing in a number that is more than the Token balance in the wallet is not allowed
+    - Make sure nothing else weird is allowed to be inputted
+6. Verify that the “Transaction Fee” toggle updates as you slide up and down
+    - Verify that the ETH equivalent price in USD updates as you toggle up and down the scale
+7. Verify that “ + Advanced” opens up new section to sending a transaction
+8. Verify that “ - Simple” closes up the advanced section 
+    - Ensure that opening up advanced or closing advanced options does not refresh the values in “To Address”/”Amount”/Coin 
+9. Verify that when changing either Gas Price or Gas limit the final price of the fee in equivalent USD is recalculated at the bottom in the grey box
+10. Ensure that you can select and deselect “Automatically Calculate Gas Limit” 
+    - Verify that when deselecting it, it also gets rid of the light grey highlight of the “Gas Limit” box
+    - Ensure that after the highlight is gone, that you can manually type in your own values
+    - Verify that re-selecting it will automatically recalculate appropriate Gas limit
+        - Ensure that the Gas Limit does not recalculate to something whack
+        - Verify that the grey highlight re-appears when you re-select it
+    - Verify that you can’t manually type in own values on top of the automatically calculated value
+11. Ensure that you can type into the “Gas Price” box
+    - Ensure that you can’t spend more gas than your wallet has
+    - Ensure that you can’t input weird values into the box
+12. Check that the question mark beside “Nonce” pops up text “More info”
+    - Ensure that it links to the correct support article: https://support.mycrypto.com/transactions/what-is-nonce.html
+    - Ensure that the refresh button for Nonce works
+    - Ensure that you can’t put in weird values into the boxit using the **Sign & Verify Message** tab.
         - Step 8
             - Broadcast the signed message from Step 7 using the **Broadcast Transaction** tab.
         - Step 9
