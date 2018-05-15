@@ -147,8 +147,42 @@
                 - Ensure the "Reject" button cancels the transaction 
                     - It should close the Metamask pop up
                     - It should close the MyCrypto Transaction pop up
-                    - This error message is shown at the bottom of the screen in red - Error: Request timed out for web3
+                    - This error message is shown at the bottom of the screen in red - 
+                         - Error: Request timed out for web3
 
+### Request Payment Tab - MetaMask
+
+1. Ensure that the "To Address" is the same Address as the logged in wallet
+    - Ensure that the Icon matches too
+2. Ensure that you can input a value into the "Amount" field
+    - Any number above 0 
+3. Ensure that you can select what Coin to request
+    - Ensure that you can select Ether
+    - Ensure that you can select a token 
+        - Check that you can type in a token symbol and have it shown in the dropdown menu (autocomplete)
+        - Ensure that the gas limit updates
+        - Ensure that the gas limit gets included in the payment qr request and code
+
+### Wallet Info Tab 
+1. Verify that the address shown in "Your Address" is the same as the current logged in wallet
+2. Verify that the address Icon is the same as the current logged in wallet
+3. Verify with your phone that the QR code shows the same address as the current logged in wallet.
+
+### Recent Transactions Tab
+1. Verify that there there are 3 coloumns that consist of: 
+    - To Address
+    - Amount
+    - SENT
+2. Ensure that you can click on a transaction and takes to the to correct page showing all of the correct transaction details
+    - Ensure that you can click on:
+        - TX Hash
+        - Block Number
+        - From Address
+        - To Address
+    - Ensure that they all link you to the correct page on Etherscan and open up in a new window
+3. Ensure that you can click "Back to Recent Transactions" and it will take you back to the list of all transactions
+3. Ensure that the text at the bottom of the list says: "Only recent transactions sent from this address via MyCrypto on the ETH network are listed here. If you don't see your transaction, you can view all of them on Etherscan." 
+    - Ensure that the link to Etherscan takes you to the current logged in wallet transaction history page
 ---
 
 ## Ledger
