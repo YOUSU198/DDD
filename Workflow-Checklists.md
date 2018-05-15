@@ -101,6 +101,53 @@
     - Ensure that it links to the correct support article: https://support.mycrypto.com/transactions/what-is-nonce.html
     - Ensure that the refresh button for Nonce works
     - Ensure that you can’t put in weird values into the box
+13. Ensure that the "Data" field only accepts hexidecimal values
+    - Invalid values are highlighted as red
+    - Valid values are highlighted in green
+14. Ensure that the "Send Transaction" button works
+    - When you click transaction:
+        - Ensure that a new window pops up with the correct information regarding the transaction
+            - The From address is the same as the logged in wallet
+            - The To address is the same address as inputted
+            - "You'll Send" will show the value that you inputted in ETH and in USD format
+            - Transaction fee" will show the value of the fee that you chose in ETH and USD format
+            - It will show the Total of ETH require for the transaction 
+                - "You'll send" + "Transaction Fee"
+            - Ensure that the "Details" button works
+                - Expands the current pop up transaction verification window
+                - Ensure that the correct Network is shown
+                    - WEB3_ETH network - provided by MetaMask / Mist
+                - Ensure that "Raw Transaction" shows all the correct information
+                    - Value
+                    - Data
+                    - To
+                    - Nonce
+                    - gasPrice
+                    - gasLimit
+                    -chainId
+                - Ensure that is shows you "Signed Transaction"
+        - Ensure that the "Cancel" button closes the curent transaction pop up window
+            - It returns you back to your logged in wallet with all the information you entered for the transaction still there
+        - Ensure the "Send" Button works
+            - Ensure that the MyCrypto transaction popup window now shows that it is loading(waiting for MetaMask confirmation)
+            - Ensure that a MetaMask pop up windows shows up for Transaction Confirmation
+                - Ensure that all the information in the MetaMask confirmation box shows the same values that you inputted previously
+                - Ensure that the "Reset" button resets information of the transaction 
+                - Ensure that the "Submit" button processes the transaction
+                    - The MetaMask popup closes 
+                    - The MyCrypto loading transaction window closes
+                    - Ensure that a green bar with a thumbs up pops up from the bottom of the screen
+                        - Shows "Your TX has been broadcast to the network. It is waiting to be mined & confirmed. During ICOs, it may take 3+ hours to confirm. Use the Verify & Check buttons below to see."
+                        - Shows you the correct TxHash of your transaction
+                        - Shows you links of your Txhash to:
+                            1. Etherscan
+                            2. Etherchain
+                            3. MyCrypto's TX Status
+                        - Check that you can close the green bar with the "X" in the right bottom corner
+                - Ensure the "Reject" button cancels the transaction 
+                    - It should close the Metamask pop up
+                    - It should close the MyCrypto Transaction pop up
+                    - This error message is shown at the bottom of the screen in red - Error: Request timed out for web3
 
 ---
 
