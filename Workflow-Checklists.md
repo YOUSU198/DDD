@@ -231,6 +231,38 @@
 6. Ensure that after the wallet is chosen and unlocked, it transitions to the correct page and displays all the correct information
 
 ---
+## Parity Signer
+1. Verify that it says “Connect & sign via your Parity Signer mobile app”
+    - Mousing over the Parity Signer box should make it “pop” and change Parity Signer title color to blue
+    - Check that mousing over the bottom right corner symbols show pop up text
+        -  Shield: “This wallet type is secure”
+        - Question Mark: “More info”
+            - Check that the Question Mark links to the correct page: https://wiki.parity.io/Parity-Signer-Mobile-App-MyCrypto-tutorial
+2. Verify that clicking Parity Signer will transition to the correct page
+3. Check that once it transitions, and you have accepted MyCrypto to use the webcam that it works
+    - The window for the camera is shown with a red box outline that is smaller than the whole webcamera frame
+4. Verify that you can go back to homepage with “Change Wallet” link in left corner
+5. Verify that the “For more information” button works https://wiki.parity.io/Parity-Signer-Mobile-App-MyCrypto-tutorial
+6. Verify that the links for downloading the app work (on phone): 
+    - iOS - https://itunes.apple.com/us/app/parity-signer/id1218174838
+    - Android - https://play.google.com/store/apps/details?id=com.nativesigner
+7. Verify that you can download the app onto your phone correctly
+    a. Check that the app opens correctly on your phone
+    b. Verify that you can select the "Accounts" option in the bottom right corner of the app
+    c. Check that you can "Create Account"
+	1. Check that it takes you to the next screen to pick a wallet Icon
+		- Check that you can select "More" for more wallet icon choices
+	2. Verify that once you select the wallet Icon that you want, that it takes you to the "New Account" page
+		- Check that you can enter an Account Name
+	3. Check that your Recovery Phrase of 11 words is given
+	4. Check that it also displays your public addres
+	5. Verify that the button "Set Up Pin" takes you to the next correct page
+		- Check that you can enter a pin and that it asks you to enter it twice
+	6. Ensure that the new wallet creates correctly
+8. Verify that you can select "Transaction QR" in app, on the bottom left corner
+9. Verify that when the QR code of the wallet on your phone's app is shown to your computer's webcam, that the wallet unlocks properly 
+    - Check that the wallet Icon and addresses match 
+---
 
 ## Private Key
 1. Verify that the box displays an example of a private Key
