@@ -11,7 +11,7 @@
 
 
 ## Create New Wallet Tab
-* [Create New Wallet Tab](#create-new-wallet-tab)
+* [Create New Wallet](#create-new-wallet-tab)
 * [Create a New Keystore Wallet](#create-a-new-wallet-keystore-file)
 
 
@@ -325,7 +325,7 @@
     - All wallet information is available once unlocked
        
 ---
-## Create New Wallet Tab
+## Create New Wallet
 
 1. Ensure that clicking on "Create New Wallet" tab takes you to the correct page
 	- Check that the warning in the orange box has no typos and reads: "Warning: Managing your own keys can be risky and a single mistake can lead to irrecoverable loss. If you are new to cryptocurrencies, we strongly recommend using MetaMask or purchasing a Ledger or TREZOR hardware wallet. Learn more about different wallet types & staying secure"
