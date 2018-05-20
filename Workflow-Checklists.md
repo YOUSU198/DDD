@@ -310,48 +310,76 @@
     - All wallet information is available once unlocked
        
 ---
+## Create New Wallet Tab
 
- - Step 8
-            - Broadcast the signed message from Step 7 using the **Broadcast Transaction** tab.
-        - Step 9
-            - Copy the transaction ID, and look up the status using the **Tx Status** tab
+1. Ensure that clicking on "Create New Wallet" tab takes you to the correct page
+	- Check that the warning in the orange box has no typos and reads: "Warning: Managing your own keys can be risky and a single mistake can lead to irrecoverable loss. If you are new to cryptocurrencies, we strongly recommend using MetaMask or purchasing a Ledger or TREZOR hardware wallet. Learn more about different wallet types & staying secure"
+	- Check that the links in the Warning link to the correct page
+		- MetaMask: https://metamask.io/
+		- Ledger: https://www.ledgerwallet.com/r/1985?path=/products/
+		- Trezor: https://shop.trezor.io/?a=mycrypto.com
+		- Learn more: https://support.mycrypto.com/private-keys-passwords/difference-beween-private-key-and-keystore-file.html
 
-    - Further Testing:
-        - Functionality Testing: https://github.com/MyCryptohq/MyCrypto/issues/482
-            - Promos
-                - Ensure that Coinbase widget works.
-                - Ensure that Shapeshift widget works.
-                - Ensure that Trezor/Ledger Promo links to knowledgebase
-            - Tokens
-                - Ensure resolution of https://github.com/MyCryptohq/MyCrypto/issues/704 is used for token testing
+### Keystore File
 
+1. Check that the description is as follows and without typos: 
+	- An encrypted JSON file, protected by a password
+	- Back it up on a USB drive
+	- Cannot be written, printed, or easily transferred to mobile
+	- Compatible with Mist, Parity, Geth
+	- Provides a single address for sending and receiving
+2. Check that the "Create New Wallet" is faded out and unclickable until valid matching passwords are inputted
+3. Ensure that the "Generate a Keystore File" button works and transitions you to the correct page
+4. Check that the "Back" link in the top left corner takes you back to previous page
+5. Check that the says "Generate a Keystore File"
+6. Ensure that there are two text input boxes.
+	- Password
+		- Ensure that there is greyed out text saying "Password must use at least 12 characters"
+		- Ensure that you can toggle password visibility with the eye icon
+	- Confirm Password
+		- Ensure that there is greyed out text saying "Do NOT forget to save this!"
+		- Ensure that you can toggle password visibility with the eye icon
+7. Check that the text at the bottom has no typos and says "This password encrypts your private key. This does not act as a seed to generate your keys. You will need this password + your keystore file to unlock your wallet."
+8. Check that when you start typing in a password that the box highlight turns red until the appropriate length of characters has been reached
+	- Check that if you use a very simple and common password such as "1234567890123" that the error: This password isn't strong enough. This is a very common password is shown, and box highlight stays red
+9. Check that when you have typed in a long enough password that the box highlight turns green
+10. Check that when you mistype the password in the "Confirm Password" box that is stays red
+11. Ensure that when the password matches in both input text boxes that the button "Create New Wallet" becomes selectable and defined
+12. Verify that clicking "Create New Wallet" transitions to the "Save Your Keystore File" page
+13.Ensure that you can not click the "Continue" button until you have downloaded the Keystore File first
+14. Check that the "Download Keystore File" works and you are able to download and save the file
+	- Check that the file is a valild JSON file
+15. Ensure that there are no typos in the text below and reads:
+	- Don't lose it! It can't be recovered if you lose it.
+	- Don't share it! Your funds will be stolen if you use this file on a malicious site.
+	- Make a Backup! Secure it like the millions of dollars it may one day be worth.
+16. Check that the "Continue" button takes you the next page correctly
+17. Ensure that the next page says "Save Your Private Key"
+18. Ensure that a valid private key is displayed
+19. Verify that a Paper Wallet is displayed
+	- Check that it properly displays: 
+		- MyCrypto Logo and webURL
+		- QR code of public address
+		- A space for writing Amount/Notes
+		- QR code for the private key 
+		- Identicon and text beside it that says "Always look for this icon when sending to this wallet"
+		- Your Address:
+		- Your Private Key:
+20. Verify that the button "Print Paper Wallet" saves to your computer correctly
+21. Check that the warning has no typos and reads:
+	- Don't lose it! It can't be recovered if you lose it.
+	- Don't share it! Your funds will be stolen if you use this file on a malicious site.
+	- Make a Backup! Secure it like the millions of dollars it may one day be worth.
+22. Check that the button "Wallet Info ->" takes you to the correct page
+23. Verify that the next page correctly displays information about how to unlock your new wallet with pictures
+	1. Open Mycrypto
+	2. Go to View & Send
+	3. Select your wallet type
+	4. Provide file & password
+24. Verify that the link in the top left corner "Back" takes you back to previous page
+25. Verify that the button "Go to Account" takes you to the View & Send Tab
 
-**Create New Wallet Tab**
-
-    - Keystore
-        - Stage 1
-            - Password should be at least 9 characters
-            - **Create New Wallet** button is disabled when not valid
-            - Eye toggle shows/hides password
-        - Stage 2
-            - Verify that **Continue** button is disabled until keystore is downloaded
-        - Stage 3
-            - Verify that the private key is valid, and it does not contain 0x prefix
-            - Print paper wallet shows both address and private key in QR and string format
-            - Test scanning both address and private key QR code to ensure matches up with text private key.
-        - Stage 4
-            - Verify that **Unlock** button takes you to send view.
-    - Mnemonic
-        - Stage 1
-            - Verify that **Regenerate** button shows new wordlist.
-        - Stage 2
-            - Eye toggle shows word, but still requires each of the 12 words to be typed in manually.
-        - Stage 3
-            - Verify that **Unlock** button takes you to send view.
-        - Misc:
-            - 12 word mnemonic should be compatible with MetaMask.
-            - Attempt to import mnemonic into MetaMask and ensure compatibility.
-
+---
 
 * **Swap Tab**
 
