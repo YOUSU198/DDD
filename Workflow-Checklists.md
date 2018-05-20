@@ -1,7 +1,20 @@
 #### NOTE: This checklist does not represent all known workflows. It is a WIP and additions are welcome.
 
-* [View & Send Tab - MetaMask](#meta-mask)
-* [View & Send Tab - Ledger](#ledger)
+## View & Send Tab:
+* [MetaMask](#meta-mask)
+* [Ledger](#ledger)
+* [Trezor](#trezor)
+* [Parity Signer](#parity-signer)
+* [MetaMask](#meta-mask)
+* [Private Key](#private-key)
+* [Keystore File](#keystore-file)
+
+
+## Create New Wallet Tab
+* [Create New Wallet Tab](#create-new-wallet-tab)
+* [Create a New Keystore Wallet](#create-a-new-wallet-keystore-file)
+
+
 
 
 # View & Send Tab
