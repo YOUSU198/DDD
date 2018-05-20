@@ -286,7 +286,7 @@
 
 ---
 
-## Create a New Wallet - Keystore File
+## Keystore File
 1. Verify that the KeyStore box displays an example of a Keystore file name save
     - Mousing over the Keystore file box should make it “pop” and change Keystore file title color to blue
 2. Check that mousing over the bottom right corner symbols show pop up text
@@ -320,7 +320,7 @@
 		- Trezor: https://shop.trezor.io/?a=mycrypto.com
 		- Learn more: https://support.mycrypto.com/private-keys-passwords/difference-beween-private-key-and-keystore-file.html
 
-### Keystore File
+### Create a New Wallet - Keystore File
 
 1. Check that the description is as follows and without typos: 
 	- An encrypted JSON file, protected by a password
