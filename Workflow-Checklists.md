@@ -1,6 +1,6 @@
 #### NOTE: This checklist does not represent all known workflows. It is a WIP and additions are welcome.
 
-
+* [View & Send Tab - MetaMask](#meta-mask)
 
 # View & Send Tab
 
