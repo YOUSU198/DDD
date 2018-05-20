@@ -11,7 +11,6 @@
 
 
 ## Create New Wallet Tab
-* [Create New Wallet](#create-new-wallet)
 * [Create a New Keystore Wallet](#create-a-new-wallet-via-keystore-file)
 
 
