@@ -11,8 +11,8 @@
 
 
 ## Create New Wallet Tab
-* [Create New Wallet](#create-new-wallet-tab)
-* [Create a New Keystore Wallet](#create-a-new-wallet-keystore-file)
+* [Create New Wallet](#create-new-wallet)
+* [Create a New Keystore Wallet](#create-a-new-wallet-via-keystore-file)
 
 
 
@@ -335,7 +335,7 @@
 		- Trezor: https://shop.trezor.io/?a=mycrypto.com
 		- Learn more: https://support.mycrypto.com/private-keys-passwords/difference-beween-private-key-and-keystore-file.html
 
-### Create a New Wallet - Keystore File
+### Create a New Wallet via Keystore File
 
 1. Check that the description is as follows and without typos: 
 	- An encrypted JSON file, protected by a password
