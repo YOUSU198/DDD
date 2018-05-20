@@ -286,7 +286,7 @@
 
 ---
 
-## Keystore
+## Create a New Wallet - Keystore File
 1. Verify that the KeyStore box displays an example of a Keystore file name save
     - Mousing over the Keystore file box should make it “pop” and change Keystore file title color to blue
 2. Check that mousing over the bottom right corner symbols show pop up text
