@@ -6,7 +6,7 @@ If you're a web3 wallet developer or user, you'll definitely want to have people
 
 It's easy to get that to happen, just open a pull request with the following changes:
 
-1. Add your logo to `common/assets/images/wallets/[your-wallet].svg`
+1. Add your logo to `common/assets/images/wallets/{provider}.svg`
     * Must be an SVG, must be #000 black, should be roughly square in shape.
 2. Add the name of your provider to `common/translations/lang/en.json` as `X_{PROVIDER}`.
     * If you go by a different name in other languages, you can also add it to other language configs.
