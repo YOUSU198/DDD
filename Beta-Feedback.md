@@ -1,1 +1,0 @@
-1. https://medium.com/@RaymondDurk/mycrypto-beta-is-a-great-sign-for-things-to-come-6e1f756b28d2
