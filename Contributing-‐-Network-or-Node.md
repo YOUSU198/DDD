@@ -17,7 +17,7 @@ If you meet all of those requirements, all that's left is to a pull request with
 
 An example commit showing what the above steps look like is available here:  https://github.com/MyCryptoHQ/MyCrypto/commit/afaa9e71c0313d9953cf39e4731a4b73f832a14a
 
-If you'd like to provide users with a direct link to your network without having to select it from the dropdown, you can send a URL like http://localhost:3000/account?network={network} where `{network}` is the key from the `staticNetworks.ts` config.
+If you'd like to provide users with a direct link to your network without having to select it from the dropdown, you can send a URL like https://mycrypto.com/account?network={network} where `{network}` is the key from the `staticNetworks.ts` config.
 
 ## Adding a Node
 
