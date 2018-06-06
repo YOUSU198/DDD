@@ -13,6 +13,7 @@
 ## Create New Wallet Tab
 * [Create a New Keystore Wallet](#create-a-new-wallet-via-keystore-file)
 
+## [Contract Tab](#contract-tab)
 
 
 
@@ -394,7 +395,52 @@
 25. Verify that the button "Go to Account" takes you to the View & Send Tab
 
 ---
+## Contract Tab
 
+### Interacting with the Consensys Multisig Contract - submitTransaction
+
+1. Access Contract tab
+2. Verify that you can toggle between the “Interact” and “Deploy” sub tabs
+3. Interact tab:
+    1. Verify that there is a drop down menu labelled “Select Existing Contract” 
+        1. Ensure that there is a placeholder value saying “Select a Contract”
+        2. Ensure that when the drop down menu is selected, you can type into it to search for the contract you are looking for
+    2. Verify that there is a text input box available for entering a “Contract Address”
+        1. Ensure that there is a placeholder value saying “ensdomain.eth or 0x4bbeEB066...”
+    4. Verify that there is a larger text input box labelled “ABI / JSON Interface”
+    5. Verify that the “Access” button is not clickable and slightly washed out
+4. Ensure that selecting the Consensys Multisig contract works correctly
+    1. Ensure that you can input your own contract address (ex. 0x0F4a28085713c1a5DEdc5D6f471c79AFe2d9321e)
+    2. Selecting it should automatically fill in the contract address to 0x101010101...
+    3. Verify that you can’t input a regular wallet address
+    4. Verify that you can’t input any weird text
+    5. Verify that the identicon displays correctly
+    6. Verify that when a valid Contract Address is entered, the box is highlight green
+    7. Verify that when the Existing Contract is selected the ABI / JSON Interface is automatically filled in: 
+        1. `[{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"owners","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"owner","type":"address"}],"name":"removeOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"transactionId","type":"uint256"}],"name":"revokeConfirmation","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"isOwner","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"},{"name":"","type":"address"}],"name":"confirmations","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"pending","type":"bool"},{"name":"executed","type":"bool"}],"name":"getTransactionCount","outputs":[{"name":"count","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"owner","type":"address"}],"name":"addOwner","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"transactionId","type":"uint256"}],"name":"isConfirmed","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"transactionId","type":"uint256"}],"name":"getConfirmationCount","outputs":[{"name":"count","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"transactions","outputs":[{"name":"destination","type":"address"},{"name":"value","type":"uint256"},{"name":"data","type":"bytes"},{"name":"executed","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getOwners","outputs":[{"name":"","type":"address[]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"from","type":"uint256"},{"name":"to","type":"uint256"},{"name":"pending","type":"bool"},{"name":"executed","type":"bool"}],"name":"getTransactionIds","outputs":[{"name":"_transactionIds","type":"uint256[]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"transactionId","type":"uint256"}],"name":"getConfirmations","outputs":[{"name":"_confirmations","type":"address[]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"transactionCount","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_required","type":"uint256"}],"name":"changeRequirement","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"transactionId","type":"uint256"}],"name":"confirmTransaction","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"destination","type":"address"},{"name":"value","type":"uint256"},{"name":"data","type":"bytes"}],"name":"submitTransaction","outputs":[{"name":"transactionId","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"MAX_OWNER_COUNT","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"required","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"owner","type":"address"},{"name":"newOwner","type":"address"}],"name":"replaceOwner","outputs":[],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"transactionId","type":"uint256"}],"name":"executeTransaction","outputs":[],"payable":false,"type":"function"},{"inputs":[{"name":"_owners","type":"address[]"},{"name":"_required","type":"uint256"}],"payable":false,"type":"constructor"},{"payable":true,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_sender","type":"address"},{"indexed":true,"name":"_transactionId","type":"uint256"}],"name":"Confirmation","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_sender","type":"address"},{"indexed":true,"name":"_transactionId","type":"uint256"}],"name":"Revocation","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_transactionId","type":"uint256"}],"name":"Submission","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_transactionId","type":"uint256"}],"name":"Execution","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_transactionId","type":"uint256"}],"name":"ExecutionFailure","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_sender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Deposit","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"}],"name":"OwnerAddition","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"}],"name":"OwnerRemoval","type":"event"},{"anonymous":false,"inputs":[{"indexed":false,"name":"_required","type":"uint256"}],"name":"RequirementChange","type":"event"}]`
+5. Verify that only after selecting a contract, entering a valid contact address and valid ABI that the Access button becomes available to select
+6. Selecting Access should bring up a new drop down menu labelled “Read / Write Contract” alongside appropriate Contract address in grey
+7. Verify that the drop down menu is scrollable and has a value placeholder saying “Select a function”
+    1.Verify that you can also type into the bar to search for the function 
+        1. Verify that once a function is selected, the appropriate text box inputs appear
+        2. Verify that you can click the x in the left side of the “Read / Write Contract” box to clear all
+    2. Select - submitTransaction 
+        1. Verify that 3 more text inputs appear below it
+            1. Destination Address (ex. `0xba2184520A1cC49a6159c57e61E1844E085615B6`)
+            2. Value uint256 (ex. 0)
+            3. Data Bytes (ex. `0xa9059cbb0000000000000000000000005c842a4f93bbd06b73a69c5cb12a1430c6f37ba30000000000000000000000000000000000000000000000000000067e6929e800`)
+            4. transactionId uint256
+8. Verify that at the end of entering the data for the contract that you are given the option to access your wallet (Looks comparable to View & Send tab)
+9. Accessing with MetaMask (or anything other wallet type should not affect end result)
+10. Ensure that you can select and deselect “Automatically Calculate Gas Limit”
+    1. When it is not selected, ensure that you can type into the gas Limit text box
+        1. Ensure that only numbers > 0 are accepted
+11. Check that you can enter a custom Gas Price, only numbers > 0
+12. Check that the Nonce refresh button works correctly
+13. Ensure that the “Write” button works
+
+
+---
 * **Swap Tab**
 
     - Check that the Shapeshift-offered swap options are displaying correctly with their icons.
