@@ -423,7 +423,7 @@
 5. Verify that only after selecting a contract, entering a valid contact address and valid ABI that the Access button becomes available to select
 6. Selecting Access should bring up a new drop down menu labelled “Read / Write Contract” alongside appropriate Contract address in grey
 7. Verify that the drop down menu is scrollable and has a value placeholder saying “Select a function”
-    1.Verify that you can also type into the bar to search for the function 
+    1. Verify that you can also type into the bar to search for the function 
         1. Verify that once a function is selected, the appropriate text box inputs appear
         2. Verify that you can click the x in the left side of the “Read / Write Contract” box to clear all
     2. Select - submitTransaction 
