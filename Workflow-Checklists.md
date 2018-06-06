@@ -13,7 +13,8 @@
 ## Create New Wallet Tab
 * [Create a New Keystore Wallet](#create-a-new-wallet-via-keystore-file)
 
-## [Contract Tab](#contract-tab)
+## [Contract Tab]
+* [Contract Consensys](#contract-consensys)
 
 
 
@@ -397,7 +398,8 @@
 ---
 ## Contract Tab
 
-### Interacting with the Consensys Multisig Contract - submitTransaction
+### Contract Consensys
+#### Interacting with the Consensys Multisig Contract - submitTransaction
 
 1. Access Contract tab
 2. Verify that you can toggle between the “Interact” and “Deploy” sub tabs
