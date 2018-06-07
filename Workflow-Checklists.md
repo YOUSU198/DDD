@@ -15,8 +15,18 @@
 
 ## Contract Tab
 * [Contract Consensys](#contract-consensys)
+* [Changing Tabs](#changing-tabs)
+* [Contract Bool Values](#contract-bool-values)
 
+## Nodes
+* [Testnet Balance Display](#testnet-balance-display)
+* [Changing Nodes](#changing-nodes)
 
+## Address Book Feature
+* [Address Book](#address-book)
+
+## Desktop App Workflow
+* [Desktop App](#desktop-app)
 
 # View & Send Tab
 
@@ -441,37 +451,149 @@
 12. Check that the Nonce refresh button works correctly
 13. Ensure that the “Write” button works
 
+### Changing Tabs
+
+1. Fill out the Interact page with any contract information
+2. As you get to signing the transaction, swicth to the Deploy tab
+3. Ensure that switching erases all data from Interact when you switch
+
+## Contract Bool Values
+
+1. Access the Contract tab
+2. Enter ABI as: 
+```
+[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "x",
+                "type": "bool"
+            }
+        ],
+        "name": "test",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
+```
+3. Enter this Contract Address ```0xCdCFc0f66c522Fd086A1b725ea3c0Eeb9F9e8814```
+4. Verify that the Access button is selectable only after filling in the 2 text boxes
+5. Verify that a text box appears after cliking "Access", that is labelled "Read / Write Contract"
+    1. verify that the inputted Contract address is also shown to the right hand side of this label
+6. Verify that the dropdown menu has a place holder "Select Function"
+7. Verify that you can select a function from the dropdown menu
+8. Verify that you can select the "test" function
+9. Ensure that after selecting the "test" function that you are presented with another dropdown menu that is labelled "x bool"
+    1. Select false
+        1. Ensure that you can access a wallet to generate transaction
+        2. Use default Gas Price/Gas Limit
+        3. Ensure that you can click "Write"
+        4. After, you should be presented with another button "Sign Transaction"
+            1. Raw Transaction Data: 
+            ```
+            {
+            "value": "0x0",
+            "data": "0x36091dff0000000000000000000000000000000000000000000000000000000000000000",
+            "to": "0xcdcfc0f66c522fd086a1b725ea3c0eeb9f9e8814",
+            "nonce": "0x0",
+            "gasPrice": "0x4a817c800",
+            "gasLimit": "0x5208",
+            "chainId": 1
+            }
+            ```
+        2. Ensure that since bool was set to false, false = 0 (Check that there isn't any 1's in the data)
+    2. Select true
+        1. Ensure that you can access a wallet to generate transaction
+        2. Use default Gas Price/Gas Limit
+        3. Ensure that you can click "Write"
+        4. After, you should be presented with another button "Sign Transaction"
+            1. ```
+                {
+                "value": "0x0",
+                "data": "0x36091dff0000000000000000000000000000000000000000000000000000000000000001",
+                "to": "0xcdcfc0f66c522fd086a1b725ea3c0eeb9f9e8814",
+                 "nonce": "0x0",
+                "gasPrice": "0x4a817c800",
+                 "gasLimit": "0x5208",
+                "chainId": 1
+                }
+                ```
+        2. Since the bool was set to True, ensure that there is a 1 in the data (true = 1)
+---
+
+## Nodes
+ 
+### Testnet Balance Display
+ 
+1. In the node drop down menu, select a test network.
+2. Ensure that switching the node works correctly.
+3. Verify that you can access a regular Ether address on the test network.
+4. Access the wallet type as you regularly would.
+5. Ensure that the Account Balance displays the correct amount of test Ether with "(Testnet)" displays beside it
+ 
+### Changing Nodes
+1. Verify that you can switch nodes before even accessing your wallet, and that it loads (blinking of the drop down menu means it is loading)
+2. Access a wallet (not via MetaMask)
+3. Ensure that you can switch nodes of the same network
+    1. Ethereum - Test all 4 nodes to see if they connect properly/load
+        1. MyCrypto
+        2. Etherscan
+        3. infura
+        4. Blockscale
+    2. Ethereum Classic
+        1. Epool.io 
+        2. Ethereum Commonwealth
+        3. Chainkorea
+    3. Ropsten (testnet)
+        1. Infura (testnet)
+        2. Kocan (testnet)
+        3. Rinkeby (testnet)
+    4. Other Networks
+4. Verify that all the account information loads correctly
+5. Now, ensure that connectin via MetaMask/web3 works correctly
+    1. Ensure that all account information is correct and loads 
+ 
+---
+
+## Address Book
+ 
+1. Access a wallet.
+2. Verify that there are 2 text input boxes
+3. Verify that the box labelled "Address", only accepts valid ETH addresses
+    1. Verify that there is greyed out text placeholder that says "New Address"
+    2. When you are in process of inputting an valid ETH address, box highlight is blue.
+    3. When you enter a valid ETH address the box highlight turns green.
+    4. When you enter an invalid ETH address the box highlight turns red.
+        1. When an invalid ETH address is inputted the error "Please enter a valid ETH address." is shown
+4. Verify that when a valid ETH address is entered, the Identicon appears and matches the address
+5. Verify that the text box labelled "Label" accepts any kind of characters
+    1. Check that it has a greyed out placeholder that says "New label"
+    2. Ensure that when the inputted label is less than 2 or more than 50 you are given the error "An address label must be between 2 and 50 characters."
+6. Verify that after having both value inputs filled in, that clicking the plus sign will "save" it to your account.
+7. Verify that after saving the address, under the Account Address section, the name is updated as well
+8. Verify that you can edit the label in the Account Address section
+    1. Verify that doing so also updates the field "Label" in the Address boox tab of the logged in wallet
+9. Verify that on the Send Ether & Tokens page of the logged in wallet displays the save address    
+    1. Start typing the label of the account into the "To Address"
+        1. The saved address, as well as Identicon and label appears below it
+    2. Ensure that you can select the popped up account and that it fills in the address correctly
+    3. Ensure that when the address is selected from the address book pop up, that below the "To Address" field box, there is green text displaying that you are sending to the saved address
 
 ---
-* **Swap Tab**
 
-    - Check that the Shapeshift-offered swap options are displaying correctly with their icons.
-    - When origin balance is smaller than amount required for transfer, and origin kind is ether/token, show warning / prevent transfer.
-        - Verify that selecting your swap and the *Let's Do This!* button leads you to the next step. Complete the entire swap process to verify correct functionality.
+## Desktop app
 
+### Expiry Date Update 
 
-* **Contracts Tab** *(Optional during patch version upgrades such as 1.1.0 -> 1.1.1)*
-
-    - Interact with a Contract
-        - Ex: Attempt to change a resolved public address for an ENS address.
-    - Deploy a Contract
-        - Attempt to deploy test contract (still needs to be created, will edit with gist link when this is ready).
-
-
-* **ENS Tab**
-
-    - Type in a valid ENS name and verify that the ENS lookup functions correctly.
-    - Type in an invalid ENS (too short or containing special characters) and verify that it displays the correct error message.
-        - Begin the process for ENS registration, and verify that the process isn't broken. *(Optional during patch version upgrades such as 1.1.0 -> 1.1.1)*
-
-
-* **Miscellaneous**
-
-    - Check that the Disclaimer Modal opens correctly in the pre-footer when clicked on.
-    - Verify that the Help tab takes you to the correct Knowledge-base.
-    - Verify Footer links aren't dead and lead to the correct locations.
-
-
-* **Mobile**
-
-    - https://www.reddit.com/r/ethtrader/comments/7h8eob/crosspost_nano_s_wallet_now_works_with/?st=JAQYKG8Q&sh=c2ef6289 should continue to work on V4.
+1. Ensure that https://download.mycrypto.com/ loads correct 
+2. Verify that you can download the app (Windows, macOS, Linux, Stand Alone)
+3. Once downlaoded and installed, ensure that the expiry notice has been updated
+    1. As of right May 6th, 2018, the expiration date is set to July 24th, 2018
