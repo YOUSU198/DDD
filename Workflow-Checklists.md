@@ -596,4 +596,4 @@
 1. Ensure that https://download.mycrypto.com/ loads correct 
 2. Verify that you can download the app (Windows, macOS, Linux, Stand Alone)
 3. Once downlaoded and installed, ensure that the expiry notice has been updated
-    1. As of right May 6th, 2018, the expiration date is set to July 24th, 2018
+    1. As of May 6th, 2018, the expiration date is set to July 24th, 2018
