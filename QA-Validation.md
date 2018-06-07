@@ -1,9 +1,10 @@
-1. Point to the workflow that needs to be tested -> When a PR is opened have it labeled to the corresponding function that needs to be tested with one or more features of the app
-2. Test each PR as they come in with their labels (MyCryptoBuilds or local build)
-    - Currently go through all commits on master since 1.0.0
-3, Document all new features/adjust workflow as needed
-4. Have all workflows documented 
-5. Determine happy paths for users - Higher Priority
+## QA Validation
 
+1. Once the a sprint is considered finished and `develop` has been merged into `master`, the maintainer will provide a mycryptobuilds.com link that includes the git commit hash that serves a mirror of the production candidate. Alternatively, the production candidate will be served on beta.mycrypto.com and testing can begin there.
+2. QA will begin running regression tests (all existing workflow checklist items).
+3. QA will will be given [list of PRs](https://github.com/MyCryptoHQ/MyCrypto/pull/1885) to form additional workflow checklist items. Most PRs will be self-explanatory or have detailed testing instructions, but if not, QA will communicate with development to learn how to reproduce the issue/build up state to test the new functionality adding in the latest release.
+4. QA will create issues as needed while validating, provide daily updates with the status of validation, and finally give a go/no-go on the health of the build once testing is finished.
 
-Smoke testing
+On-Going Tasks:
+1. Isolate "happy-path" workflow checklist items to their own sections, so that smoke-tests can be performed more easily.
+
