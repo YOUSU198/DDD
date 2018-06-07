@@ -558,7 +558,7 @@
         3. Rinkeby (testnet)
     4. Other Networks
 4. Verify that all the account information loads correctly
-5. Now, ensure that connectin via MetaMask/web3 works correctly
+5. Now, ensure that connecting via MetaMask/web3 works correctly
     1. Ensure that all account information is correct and loads 
  
 ---
