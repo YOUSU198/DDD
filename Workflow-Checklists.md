@@ -9,6 +9,11 @@
 * [Private Key](#private-key)
 * [Keystore File](#keystore-file)
 
+## Token Balance
+* [Token Balance Check](#token-balance-check)
+
+## Promotions
+* [Simplex Promo](#simplex-promo)
 
 ## Create New Wallet Tab
 * [Create a New Keystore Wallet](#create-a-new-wallet-via-keystore-file)
@@ -21,6 +26,8 @@
 ## Nodes
 * [Testnet Balance Display](#testnet-balance-display)
 * [Changing Nodes](#changing-nodes)
+* [Other Nodes Check](#other-nodes-check)
+* [Node Failure to Load](#node-failure-to-load-check)
 
 ## Address Book Feature
 * [Address Book](#address-book)
@@ -406,6 +413,27 @@
 25. Verify that the button "Go to Account" takes you to the View & Send Tab
 
 ---
+
+## Token Balance Check
+
+### Token Balance Failure to Load When Node is offline
+
+1. Set the network to "ETH (AUTO)"
+2. Unlock a wallet containing a token like EOS (example wallet:```0xcD009D5d5b7e68F4C36Da5C21F646AfAA83075E2```)
+3. Ensure that the token balance loads correctly
+
+---
+
+## Promotions
+
+### Simplex Promo
+
+1. Change system clock to European time
+2. Access a wallet
+3. Ensure that once the wallet is unlocked, check that the Simplex promo is visible
+4. Ensure that the promo links you to: https://buy.mycrypto.com/
+
+---
 ## Contract Tab
 
 ### Contract Consensys
@@ -561,6 +589,26 @@
 5. Now, ensure that connecting via MetaMask/web3 works correctly
     1. Ensure that all account information is correct and loads 
  
+### Other Nodes Check
+
+1. Select the node you are testing 
+2. Access a wallet of any type
+    1. Can't select MetaMask unless testing an Ethereum node/network
+3. Ensure that the wallet unlocks correctly
+4. Ensure that your Account Balance is correctly displayed followed by the appropriate coin name
+    1. ex. 1.092 ETC 
+    2. ex. 35.80 MUSIC
+
+
+### Node Failure to Load Check
+
+1. Run MyCrypto offline or mistype one of the node URLs in libs/nodes/config.ts
+2. Attempt to switch nodes
+3. Confirm that it fails, but that the node selector stops flashing
+    1. Ensure that you are also given this error:
+        - You’ve lost your connection to the network, check your internet connection or try changing networks from the dropdown at the top right of the page.
+        - Could not connect to the node. Refresh your page, try a different node (upper right corner), check your firewall settings. If custom node, check your configs.
+
 ---
 
 ## Address Book
