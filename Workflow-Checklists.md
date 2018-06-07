@@ -457,7 +457,7 @@
 2. As you get to signing the transaction, swicth to the Deploy tab
 3. Ensure that switching erases all data from Interact when you switch
 
-## Contract Bool Values
+### Contract Bool Values
 
 1. Access the Contract tab
 2. Enter ABI as: 
