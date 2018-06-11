@@ -11,4 +11,5 @@
 
 On-Going Tasks:
 1. Isolate "happy-path" workflow checklist items to their own sections, so that smoke-tests can be performed more easily.
+2. Automate testing - Cypress
 
