@@ -35,7 +35,7 @@ should do:
 
 1. **Search for your issue** - If you're experiencing something, the chances are
     good that someone else is too. Search the issue queue or our
-    [Knowledge Base](support.mycrypto.com) before posting. You may even find an
+    [Knowledge Base](https://support.mycrypto.com/) before posting. You may even find an
     answer to your problem!
 2. **Describe the issue in detail** - Instead of describing something as "not
     working" or being "broken", explain what you expected to happen, and what's
