@@ -3,6 +3,7 @@
 ## View & Send Tab:
 * [MetaMask](#meta-mask)
 * [Ledger](#ledger)
+    * [Address Verification on Ledger](#address-verification-on-ledger)
 * [Trezor](#trezor)
 * [Parity Signer](#parity-signer)
 * [MetaMask](#meta-mask)
@@ -28,12 +29,20 @@
 * [Changing Nodes](#changing-nodes)
 * [Other Nodes Check](#other-nodes-check)
 * [Node Failure to Load](#node-failure-to-load-check)
+* [Auto Node](#auto-node)
 
 ## Address Book Feature
 * [Address Book](#address-book)
 
 ## Desktop App Workflow
 * [Desktop App](#desktop-app)
+
+## Preserving Query Params of Redirect URL
+* [Network Redirect URL](#network-redirect-url)
+* [Transaction Params of URL](#transaction-params-of-url)
+
+## Offline App
+* [Offline Status Checker](#offline-status-checker)
 
 # View & Send Tab
 
@@ -239,6 +248,25 @@
     - Verify that you can only select one address at a time
     - Ensure that once an address is selected, that the unlock button becomes available, and not before an address is chosen
 6. Ensure that after the wallet is chosen and unlocked, it transitions to the correct page and displays all the correct information
+
+### Address Verification on Ledger
+
+1. Connect Ledger to Computer (Ensure that the Ethereum App is running and web browser setting is enabled)
+2. Ensure that you can connect to Ledger wallet via MyCrypto.com
+3. Ensure that after Ledger is unlocked that the window which allows you to pick a wallet to open appears
+    1. Verify that you can Toggle “More” and “Back” to access various addresses available on your Ledger
+    2. Verify that you can Select a Node in the drop down menu ‘
+    3. Verify that you can pick a token in the drop down
+    4. Verify that the link under “More” works
+    5. Verify that you can only select one address at a time
+    6. Ensure that once an address is selected, that the unlock button becomes available, and not before an address is chosen
+4. From the "Addresses" drop down menu, select "Custom"
+    - Enter ``` m/44'/60'/0'/0```
+    - Ensure that clicking the green tick button opens up a new list of wallets
+5. Ensure that you can select any address from the list
+    - Ensure that the "Unlock" button works and unlocks appropriate wallet
+6. Ensure that you can click "Display Address on Ledger"
+7. Ensure that the address is displayed correctly on the Ledger and that you can confirm with the checkmark 
 
 ---
 
@@ -609,6 +637,10 @@
         - You’ve lost your connection to the network, check your internet connection or try changing networks from the dropdown at the top right of the page.
         - Could not connect to the node. Refresh your page, try a different node (upper right corner), check your firewall settings. If custom node, check your configs.
 
+### Auto Node
+
+1. Confirm (AUTO) is shown when a network is selected in place of a specific node on the network
+
 ---
 
 ## Address Book
@@ -645,3 +677,50 @@
 2. Verify that you can download the app (Windows, macOS, Linux, Stand Alone)
 3. Once downlaoded and installed, ensure that the expiry notice has been updated
     1. As of May 6th, 2018, the expiration date is set to July 24th, 2018
+
+---
+## URL Redirects
+## Preserving Query Params of Redirect URL
+
+### Network Redirect URL
+1. Visit https://mycrypto.com/?network=etc
+2. Ensure that the url re-directs you to the appropriate link
+3. Ensure that the network has been swicthed automatically to the ETC network
+
+### Transaction Params of URL
+
+1. Visit mycrypto.com/account/send?to=0x4bbeEB066eD09B7AEd07bF39EEe0460DFa261520&value=1&limit=50000&data=0xa
+2. Access a wallet like you normally would
+3. Ensure that you are given a pop up that says:
+    - You arrived via a link that has the address, value, gas, data fields, or transaction type (send mode) filled in for you. You can change any information before sending. Unlock your wallet to get started.
+4. Ensure that the values are filled in according to the URL 
+5. Ensure that you can still change values on the transaction
+6. Ensure that you can send the transaction 
+
+---
+## Offline Status Checker
+
+1. Load app while online
+2. Ensure that the online indicator should still be green
+3. Go to dev tools - Network Tab
+4. Check `offline` box
+5. Verify that the App should go offline, but that it is still checking if it can reach any nodes
+    1. Ensure that you are also given this warning: 
+        - "You are currently offline. Some features will be unavailable."
+6. If it can reach a node, it will go back online
+7. Uncheck `offline` box, app should still remain online if steps 6 completed successfully
+    1. Ensure that you are given this pop up when connection is made:
+        - "Your connection to the network has been restored!"
+8. Completely disable your network connection 
+9. Verify that the App should go completely offline, node checks should fail, so app should stay offline while network connection is disabled
+10. Re-enable your network connection
+11. After a short period, if a node is online, app should regain connection to network and display being connected back to network
+12. Login with wallet
+    1. Ensure that you can still log in correctly
+    2. Verify the "Advanced" section shows correct nonce or that nonce is not empty
+13. Go offline again
+    1. Loing with wallet
+    2. Verify that you can still log in correctly
+    3. Verify that the "Advanced" section shows Nonce field highlighyed in a red border and is visible immediately
+
+
