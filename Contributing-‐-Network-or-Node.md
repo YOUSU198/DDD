@@ -13,7 +13,7 @@ If you meet all of those requirements, all that's left is to a pull request with
 1. Add a deterministic path (aka dpath) to `common/configs/dpath.ts` for your network, even if it just uses Ethereum's default path
 2. Add at least one node to `common/libs/nodes/configs.ts`
 3. Add your network configuration to `common/features/config/networks/static/reducer.ts`
-4. Add your network's key (matching the key in `staticNetworks.ts`) to `shared/types/network.d.ts`
+4. Add your network's key (matching the key in `reducer.ts`) to `shared/types/network.d.ts`
 
 If you'd like to provide users with a direct link to your network without having to select it from the dropdown, you can send a URL like https://mycrypto.com/account?network={network} where `{network}` is the key from the `staticNetworks.ts` config.
 
