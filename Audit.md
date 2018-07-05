@@ -11,4 +11,4 @@ Once again, the Cure53 worked with the MyCrypto team to our codebase, with a spe
 
 This audit was performed on branch `cure53` at hash `e90cde75fd20901ff3f320ac03c6db49586ca8f0`. 
 
-##### You can review the in its entirety [here](https://github.com/MyCryptoHQ/MyCrypto/files/2167699/MC-01-report.pdf)
+##### You can review the in its entirety [here](https://github.com/MyCryptoHQ/MyCrypto/files/2167699/MC-01-report.pdf).
