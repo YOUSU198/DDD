@@ -492,7 +492,7 @@ Rate: 14.07223796 BTC/ETH
 2. Unlock a wallet containing a token like EOS (example wallet:```0xcD009D5d5b7e68F4C36Da5C21F646AfAA83075E2```)
 3. Ensure that the token balance loads correctly
 
-### Auto Add Token 
+### Auto Add Token Details
 1. Access a wallet with a token that is not yet a default token
 2. Scan for Tokens
 3. Ensure that you can start adding a custom token
