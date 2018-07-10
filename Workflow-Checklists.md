@@ -811,7 +811,7 @@ Rate: 14.07223796 BTC/ETH
 3. Once downlaoded and installed, ensure that the expiry notice has been updated
     1. As of May 6th, 2018, the expiration date is set to July 24th, 2018
 
-###Right click
+### Right click
 1. Open up the desktop App
 2. Ensure that when you right click items, you are given a menu for the appropriate TransactionActions
 
