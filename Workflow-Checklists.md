@@ -12,6 +12,7 @@
 
 ## Token Balance
 * [Token Balance Check](#token-balance-check)
+* [Auto Add Token Details](#auto-add-token-details)
 
 ## Promotions
 * [Simplex Promo](#simplex-promo)
@@ -19,10 +20,22 @@
 ## Create New Wallet Tab
 * [Create a New Keystore Wallet](#create-a-new-wallet-via-keystore-file)
 
+## Swap
+* [Swap Support](#swap-support)
+
 ## Contract Tab
-* [Contract Consensys](#contract-consensys)
+* [Interacting with Contracts with ETH Network](#interacting-with-contracts-with-eth-network)
+* [Interacting with the Consensys Multisig Contract](#interacting-with-the-consensys-multisig-contract)
 * [Changing Tabs](#changing-tabs)
 * [Contract Bool Values](#contract-bool-values)
+* [Sending a Transaction to a Contract](#sending-a-transaction-to-a-contract)
+* [Contract Support for Undefined Input Names](#contract-support-for-undefined-input-names)
+
+### Other Nodes Contract Tab
+* [RSK Contract Interaction](#rsk-contract-interaction)
+
+## ENS
+* [ENS General Check](#ens-general-check)
 
 ## Nodes
 * [Testnet Balance Display](#testnet-balance-display)
@@ -30,12 +43,14 @@
 * [Other Nodes Check](#other-nodes-check)
 * [Node Failure to Load](#node-failure-to-load-check)
 * [Auto Node](#auto-node)
+* [MetaMask Node Stuck on Logout](#metamask-node-stuck-on-logout)
 
 ## Address Book Feature
 * [Address Book](#address-book)
 
 ## Desktop App Workflow
 * [Desktop App](#desktop-app)
+* [Right Click](#right-click)
 
 ## Preserving Query Params of Redirect URL
 * [Network Redirect URL](#network-redirect-url)
@@ -43,6 +58,11 @@
 
 ## Offline App
 * [Offline Status Checker](#offline-status-checker)
+
+## App Settings
+* [Language Selection](#language-selection)
+* [Browser Back Button Interaction](#browser-back-button-interaction)
+* [Removal of Private Keys](#removal-of-private-keys)
 
 # View & Send Tab
 
@@ -441,6 +461,28 @@
 25. Verify that the button "Go to Account" takes you to the View & Send Tab
 
 ---
+## Swap
+
+### Swap Support  
+
+1. Navigate to the Swap tab
+2. Ensure that there is a button that says: "Issue with your Swap? Contact support"
+    1. Verify that there is a backup link that says: "Click here if link doesn't work"
+3. Ensure that the following information is included in the email:
+
+```
+To: support@shapeshift.zendesk.com,support@mycrypto.com
+Subject: Issue regarding my Swap via MyCrypto
+Message:
+Provider: Shapeshift
+REF ID#: 
+Amount to send:  BTC
+Amount to receive:  ETH
+Payment Address: 
+Receiving Address: 
+Rate: 14.07223796 BTC/ETH
+```
+---
 
 ## Token Balance Check
 
@@ -449,6 +491,26 @@
 1. Set the network to "ETH (AUTO)"
 2. Unlock a wallet containing a token like EOS (example wallet:```0xcD009D5d5b7e68F4C36Da5C21F646AfAA83075E2```)
 3. Ensure that the token balance loads correctly
+
+### Auto Add Token 
+1. Access a wallet with a token that is not yet a default token
+2. Scan for Tokens
+3. Ensure that you can start adding a custom token
+    1. Verify that when you click "Add Custom Token"
+        1. Ensure that 4 text input boxes appear
+        2. Ensure that there is a help link on how to add custom tokens - https://support.mycrypto.com/tokens/adding-new-token-and-sending-custom-tokens.html
+        3. Ensure that there is a button to "Cancel" adding a custom token 
+            1. verify that clicking "Cancel" closes the box and still retains saved tokens
+        4. Ensure that the "Save" button is not enabled until a valid token address is inputted
+        5. Ensure that the text boxes for:
+            - Decimals
+            - Token Symboll
+            - Balance
+        Are barred off from inputting custom details
+        6. Input the address of the non-default token
+            1. Ensure that the decimals/Token Symbol/Balance are all automatically filled in with the correct values]
+            2. Verify that invalid addresses give you the error: "Not a valid address:
+            3. Ensure that you can successfully save new custom token
 
 ---
 
@@ -464,8 +526,9 @@
 ---
 ## Contract Tab
 
-### Contract Consensys
-#### Interacting with the Consensys Multisig Contract - submitTransaction
+
+### Interacting with Contracts with ETH Network
+#### Interacting with the Consensys Multisig Contract
 
 1. Access Contract tab
 2. Verify that you can toggle between the “Interact” and “Deploy” sub tabs
@@ -507,6 +570,11 @@
 12. Check that the Nonce refresh button works correctly
 13. Ensure that the “Write” button works
 
+### Sending a Transaction to a Contract
+
+1. Go to send a transaction via MyCrypto
+2. Enter the address ```0x37f25bd26848cf02614c29338dd71a4d03b62218``` (is a contract)
+3. Ensure that the gas limit estimates correctly
 ### Changing Tabs
 
 1. Fill out the Interact page with any contract information
@@ -583,8 +651,68 @@
                 }
                 ```
         2. Since the bool was set to True, ensure that there is a 1 in the data (true = 1)
+
+### Contract Support for Undefined Input names
+
+1. Go to Contracts tab -> Interact
+2. Use the following ABI:
+```
+[ 
+   {
+      "constant": true,
+      "inputs": [{ "name": "", "type": "uint256" }, { "name": "", "type": "address" }],
+      "name": "whitelist",
+      "outputs": [{ "name": "", "type": "bool" }],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+   }
+]
+```
+3. Use address: ```0xB8BF791166eed1A94B3a19bEE0d7dbb2A98b504E```
+4. Fill in each field under the whitelist function
+5. Make sure you're able to fill each field seperately (except for "bool")
+
+## Other Nodes Contracts Tab
+
+### RSK Contract Interaction
+
+1. Change network to RSK(mycrypto.rsk.co)
+2. Navigate to the Contracts Tab
+3. Select the Bridge contract
+4. Ensure that you can correctly execute the Bridge contract
+5. Validate that you get the correct response
+    - Bridge contract (0x000000...)
+    - Contract Address: ```0x0000000000000000000000000000000001000006```
+    - ABI: ```[{ "name": "getFederationAddress", "type": "function", "constant": true, "inputs": [], "outputs": [{ "name": "", "type": "string" }] }]```
+    - Function: getFederationAddress
+    - String should read: ```39AHNvUmzaYgewA8yCtBtNsfRz7QD7ZJYi```
 ---
 
+## ENS
+
+### ENS General Check 
+1. Verify that you can navigate to the ENS page
+2. Ensure that the page title reads "Ethereum Name Service"
+    1. Check that ENS link is correct and valid
+        1. Ethereum Name Service - https://ens.readthedocs.io/en/latest/introduction.html
+    2. Ensure that the text reads : ```"The Ethereum Name Service (ENS) is a distributed, open, and extensible naming system based on the Ethereum blockchain. Once you have a name, you can tell your friends to send ETH to ensdomain.eth instead of 0x4bbeEB..."```
+    3. Ensure that there is a text input box with a premanent block of text that contains ".eth"
+        1. Ensure that there is greyed out text in the text input box that reads "mycrypto"
+    4. Ensure that the button is not clickable until valid input
+        1. Ensure that gibberish does to enable to button ex. i.ert.45.ert
+            1. Error given: "Must be at least 7 characters, no special characters"
+        2. Ensure that only "-" are allowed in the name
+    5. Ensure that ENS domains that are already owned, are shown as already owned:
+        1. Ensure that relevant information is included about the already owned ENS domain in Hex:
+            1. Name:
+            2. Labelhash __name:
+            3. Namehash __name.eth:
+            4. Owner:
+            5. Highest Bid:
+            6. Resolved Address:
+    6. Ensure that domains that are not yet owned are shown as available
+        1. Ensure that you are shown that the ENS domain is available and redirects you to MyCrypto v3 to start the auction
 ## Nodes
  
 ### Testnet Balance Display
@@ -641,6 +769,11 @@
 
 1. Confirm (AUTO) is shown when a network is selected in place of a specific node on the network
 
+### MetaMask Node Stuck on Logout
+1. Log in with MetaMask
+2. Change tabs (Log out)
+3. Ensure that you're on the node you want to be (notice the node dropdown pulses does not remain locked/disabled)
+
 ---
 
 ## Address Book
@@ -677,6 +810,10 @@
 2. Verify that you can download the app (Windows, macOS, Linux, Stand Alone)
 3. Once downlaoded and installed, ensure that the expiry notice has been updated
     1. As of May 6th, 2018, the expiration date is set to July 24th, 2018
+
+###Right click
+1. Open up the desktop App
+2. Ensure that when you right click items, you are given a menu for the appropriate TransactionActions
 
 ---
 ## URL Redirects
@@ -723,4 +860,36 @@
     2. Verify that you can still log in correctly
     3. Verify that the "Advanced" section shows Nonce field highlighyed in a red border and is visible immediately
 
+---
 
+### Language Selection
+
+1. Verify that the language selector drop down menu opens up all available languages
+2. Ensure that after selecting a language that the app refreshes and now displays selected language
+
+### Browser Back Button Interaction
+1. Access any wallet
+2. Click the "back" button of the web Browser
+3. Ensure that you are redirected to the home landing page of MyCrypto and are logged out of the wallet
+
+### Removal of Private Keys
+1. Check the online web app
+    1. Ensure that you can not access a wallet via:
+        1. Private Key
+        2. Keystore File 
+        3. Mnemonic Phrase
+    2. Verify that instead of being able to log in you are redirected to Download the MyCrypto Desktop App
+        1. Ensure that the link to the desktop app download works
+        2. Ensure that the Arrow to go back to wallet selection page works
+        3. Ensure that there is a light greyed out box of text which reads "I'm a dev, override this"
+            1. Ensure that selecting the button allows you to continue accessing the wallet as one normally would previously
+    3. Ensure that you can not create a new wallet via private Keys
+        1. Verify that visiting the "Create New Wallet" tab does not allow you to make private key wallets (privatekey/Keystore/mnemonic)
+        2. Verify that it gives you the option to create secure wallets 
+            1. Order a hardware wallet
+            2. Download MetaMask
+            3. Download Parity
+        3. Verify that it also shows you that you still can generate a private key wallet via the desktop app (check all links)
+            1. Ensure that there is a button that redirects you to the download page for the desktop app
+2. Check the Desktop app
+    1. Verify that you can still access wallets via all private key options and create a private key wallet
