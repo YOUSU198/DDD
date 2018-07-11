@@ -471,7 +471,7 @@
 24. Verify that the link in the top left corner "Back" takes you back to previous page
 25. Verify that the button "Go to Account" takes you to the View & Send Tab
 
-### Sending a Trasaction
+### Sending a Transaction
 1. Access a wallet
 2. On intial opening of the wallet, ensure that the gas price silder is at recommened price after loading
 
