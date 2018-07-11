@@ -69,7 +69,7 @@
 * [Language Selection](#language-selection)
 * [Browser Back Button Interaction](#browser-back-button-interaction)
 * [Removal of Private Keys](#removal-of-private-keys)
-* [Consoleloge Print](#consolelog-print)
+* [Consolelog Print](#consolelog-print)
 
 ## Other Internet Browsers
 * [Firefox](#firefox)
