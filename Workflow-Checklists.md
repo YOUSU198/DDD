@@ -9,10 +9,14 @@
 * [MetaMask](#meta-mask)
 * [Private Key](#private-key)
 * [Keystore File](#keystore-file)
+* [Sending a Transaction](#sending-a-transaction)
 
 ## Token Balance
 * [Token Balance Check](#token-balance-check)
 * [Auto Add Token Details](#auto-add-token-details)
+
+## Swap
+* [Swap General Check](#swap-general-check)
 
 ## Promotions
 * [Simplex Promo](#simplex-promo)
@@ -40,10 +44,12 @@
 ## Nodes
 * [Testnet Balance Display](#testnet-balance-display)
 * [Changing Nodes](#changing-nodes)
+* [Custom Node](#custom-node)
 * [Other Nodes Check](#other-nodes-check)
 * [Node Failure to Load](#node-failure-to-load-check)
 * [Auto Node](#auto-node)
-* [MetaMask Node Stuck on Logout](#metamask-node-stuck-on-logout)
+* [MetaMask Network Change](#metamask-network-change)
+* [RSK Node](#rsk-node)
 
 ## Address Book Feature
 * [Address Book](#address-book)
@@ -63,6 +69,11 @@
 * [Language Selection](#language-selection)
 * [Browser Back Button Interaction](#browser-back-button-interaction)
 * [Removal of Private Keys](#removal-of-private-keys)
+* [Consoleloge Print](#consolelog-print)
+
+## Other Internet Browsers
+* [Firefox](#firefox)
+* [Internet Explorer](#internet-explorer)
 
 # View & Send Tab
 
@@ -460,6 +471,10 @@
 24. Verify that the link in the top left corner "Back" takes you back to previous page
 25. Verify that the button "Go to Account" takes you to the View & Send Tab
 
+### Sending a Trasaction
+1. Access a wallet
+2. On intial opening of the wallet, ensure that the gas price silder is at recommened price after loading
+
 ---
 ## Swap
 
@@ -511,6 +526,23 @@ Rate: 14.07223796 BTC/ETH
             1. Ensure that the decimals/Token Symbol/Balance are all automatically filled in with the correct values]
             2. Verify that invalid addresses give you the error: "Not a valid address:
             3. Ensure that you can successfully save new custom token
+
+---
+### Swap General Check
+1. Verify that you can navigate to the swap tab
+2. Ensure that you see current rates of coins that are randomly chosen
+    1. verify that you can type in a number to compare the coins where the (1) is
+3. Ensure that you can pick all coins listed for deposit and Receive
+4. Once you have inputted a value for deposit, ensure that the amount to receive is automatically calculated
+5. Ensure that the button to start swap becomes enabled only after a valid deposit number has been entered. 
+6. On next Swap page, you should be able to input your Receiving address
+    1. Ensure that the ```Start Swap``` button only becomes enabled after a valid receiving address for that coin is entered
+7. Make sure on next screen you are shown your reference number, time remaining for the transfer, amount you are receiving and at which rate the swap is taking place
+8. Ensure that you are given all wallet options to access to finish the trade
+9. Once you are logged into the wallet, ensure that the address and amount to send fields are automatically fillled in for you correctly. 
+10. Ensure that you can successfully send the transaction. 
+11. Verify that the Swap completion bar updates as the swap progresses
+12. Ensure that you get your swapped coin
 
 ---
 
@@ -745,6 +777,22 @@ Rate: 14.07223796 BTC/ETH
 5. Now, ensure that connecting via MetaMask/web3 works correctly
     1. Ensure that all account information is correct and loads 
  
+### Custom Node
+1. In the top right drop down menu, ensure that you can select "Add Custom Node"
+2. Ensure that after cliking custom node, a pop up window appears that is titled "Set Up Your Custom Node"
+    1. Veryif that you are given a warning:
+    ```Your node must be HTTPS in order to connect to it via MyCrypto.com. You can download the MyCrypto repo & run it locally to connect to any node. Or, get free SSL certificate via LetsEncrypt```
+3. Ensure that the first drop down menu is titled "Default Nodes Found" (as long as you have a valid node running on your computer simultaneously)
+4. Ensure that your custom node is listed
+5. Verify that once your custom node is selected, that the rest of the fields are filled in correctly
+6. Ensure that you can select the option "HTTP Basic Authentication"
+    1. Ensure that this opens up 2 more text boxes for a username and a password
+7. Check that the Cancel button works
+8. Check that the "Save & Use Custom Node" work
+9. Verify that you can access your wallet
+    1. Ensure that your wallet address and balance are displayed correctly
+10. Ensure that you can send a transaction
+
 ### Other Nodes Check
 
 1. Select the node you are testing 
@@ -769,10 +817,13 @@ Rate: 14.07223796 BTC/ETH
 
 1. Confirm (AUTO) is shown when a network is selected in place of a specific node on the network
 
-### MetaMask Node Stuck on Logout
-1. Log in with MetaMask
-2. Change tabs (Log out)
-3. Ensure that you're on the node you want to be (notice the node dropdown pulses does not remain locked/disabled)
+### MetaMask Network Change
+1. Access a wallet via MetaMask
+2. In the MetaMask chrome extension itself, switch networks
+3. Ensure that you are logged out from the current wallet
+
+RSK Node
+1. Ensure that the ENS and Swap tab are not visible when switching to this network
 
 ---
 
@@ -893,3 +944,19 @@ Rate: 14.07223796 BTC/ETH
             1. Ensure that there is a button that redirects you to the download page for the desktop app
 2. Check the Desktop app
     1. Verify that you can still access wallets via all private key options and create a private key wallet
+
+### Consolelog Print
+1. Open up Console
+2. Ensure that you see the MyCrypto logo and a link to ```https://about.mycrypto.com/jobs ```
+
+--- 
+
+## Other Internet Browsers
+
+### Firefox
+1. Try connecting to Ledger on Mozilla
+2. Ensure that you can't and are given this error ```TransportError: U2F browser support is needed for Ledger. Please use Chrome, Opera or Firefox with a U2F extension. Also make sure you're on an HTTPS connection```
+
+### Internet Explorer
+1. Try accessing MyCrypto with IE
+2. Ensure you are given this error ```Your Browser is Out of Date. MyCrypto requires certain features that your browser doesn't offer. Your browser may also be missing security updates that could open you up to vulnerabilities. Please update your browser, or switch to one of the following browsers to continue using MyCrypto. ```
