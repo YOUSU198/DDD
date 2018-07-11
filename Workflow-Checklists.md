@@ -822,7 +822,7 @@ Rate: 14.07223796 BTC/ETH
 2. In the MetaMask chrome extension itself, switch networks
 3. Ensure that you are logged out from the current wallet
 
-RSK Node
+### RSK Node
 1. Ensure that the ENS and Swap tab are not visible when switching to this network
 
 ---
