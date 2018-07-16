@@ -2,7 +2,7 @@
 
 1. Release Frequency
 
-Releases will be published every other Monday. Holidays and extenuating circumstances will result in delayed releases.
+Releases are tagged on the ~15th and ~1st. Holidays and extenuating circumstances will result in delayed releases.
      
 - A staggered release schedule with a release candidate published live for 1 week before "full" release will be employed to allow relatively wide-scale testing 
         
