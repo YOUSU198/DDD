@@ -934,7 +934,7 @@ Rate: 14.07223796 BTC/ETH
         2. Ensure that the Arrow to go back to wallet selection page works
         3. Ensure that there is a light greyed out box of text which reads "I'm a dev, override this"
             1. Ensure that selecting the button allows you to continue accessing the wallet as one normally would previously
-    3. Ensure that you can not create a new wallet via private Keys
+    3. Ensure that you can not create a new wallet via private Keys (on mycyryptobuilds this is possible because of how it is rendered)
         1. Verify that visiting the "Create New Wallet" tab does not allow you to make private key wallets (privatekey/Keystore/mnemonic)
         2. Verify that it gives you the option to create secure wallets 
             1. Order a hardware wallet
