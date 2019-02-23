@@ -2,14 +2,8 @@
 
 1. Release Frequency
 
-Releases are tagged on the ~15th and ~1st. Holidays and extenuating circumstances will result in delayed releases.
-     
-- A staggered release schedule with a release candidate published live for 1 week before "full" release will be employed to allow relatively wide-scale testing 
-        
- - Holidays / extenuating circumstances resulting in delayed beta releases will result in a similarly delayed production release to ensure that the beta release candidate is live for at least 1 week.
-    
- - A Header/Banner with solicitation for feedback via GitHub and Email will be shown on the beta site to ensure users are aware on how to provide feedback.
-
+Releases are tagged every two weeks, typically on a Thursday though occasionally on a Friday. Holidays and extenuating circumstances will result in delayed releases.
+                 
 2. Release Notes
     - At a minimum, summarized release notes via [dternyak/GitHub-Project-Management](https://github.com/dternyak/GitHub-Project-Management) will be released alongside new releases.
 
@@ -43,9 +37,11 @@ npm run build:downloadable
 
 ### Releasing
 
-Zip up the folder created by this build, and that's it. It runs standalone.
+HTML builds must be publicly verified by two non-infrastructure-controlling team members via Drawbridge. 
 
-## Electron <sup>(Not yet implemented)</sup>
+Drawbridge is a tool that checks the hashes of the proposed release against build on independent members computers. The release can only go live once two people verify the hashes match.
+
+## Electron
 
 ### Building
 
@@ -53,15 +49,17 @@ To create the Electron build(s), run
 ```
 npm run build:electron
 ```
+
 This will build Electron against all 3 platforms (OSX, Windows, Linux). Currently this process only works on OSX, as it can build Windows and Linux, but they cannot build OSX. Hopefully this gets moved to CI soon
 
 ### Releasing
 
-A lot of files will be generated from the build, but you'll only want to upload the following files to the release:
-  * MyCrypto-[version]-mac.zip (**not the dmg**) (OSX)
-  * MyCrypto-setup-[version].exe (Windows)
-  * MyCrypto-setup-[version].blockmap (Windows)
-  * MyCrypto-[version]-x86_64.AppImage (Linux)
-  * latest-mac.yml (OSX)
-  * latest-linux.yml (Linux)
-  * latest.yml (Windows)
+The official Electron builds for release must be built, signed via airgapped machine, and uploaded to via Github releases along with a checksum and signed checksum file. 
+
+- checksums.txt
+- checksums.txt.gpg
+- linux-i386_[version]_MyCrypto.AppImage
+- linux-x86-64_[version]_MyCrypto.AppImage
+- mac_[version]_MyCrypto.dmg
+- standalone_[version]_MyCrypto.zip
+- windows_[version]_MyCrypto.exe
