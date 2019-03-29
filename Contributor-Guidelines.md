@@ -1,59 +1,36 @@
-Thanks for showing interest in contributing to MyCrypto! Here are some basic
-guides for how to best help out, depending on how you're looking to contribute.
+Thanks for showing interest in contributing to MyCrypto! Here are some tips that are
+hopefully helpful.
 
-* [I'm Having a Problem With My Wallet / Transaction / Swap / ENS](#getting-support)
-* [I Want to Report a Bug or Issue](#reporting-a-bug)
-* [I Want to Suggest a Feature](#suggesting-a-feature)
-* [I Want to Help With Translations](#providing-translations)
-* [I Want to Contribute Some Code](#contributing-code)
+Github is primarily for developers and is mostly monitored by MyCrypto developers. 
+If you need assistance using our product or simply want to chat with us:
 
-If your contribution doesn't fit in to those, feel free to send us an email
-at [support@mycrypto.com](mailto:support@mycrypto.com) or hit us up on Twitter
-at [@MyCrypto](https://twitter.com/mycrypto).
+- Email us at support@mycrypto.com
+- Join our [Discord](https://discordapp.com/invite/VSaTXEA)!
 
-<br/>
+If you have a critical or security-related issue, please reach out to us via a more private channel, like security@mycrypto.com or via HackerOne. 
 
----
-
-<br/>
-
-## Getting Support
-
-If you're having a problem with the site that you do not believe to be a bug
-with the software, you'll get help from our support team by emailing
-[support@mycrypto.com](mailto:support@mycrypto.com). The Github issue queue
-is used for development, not support, so your question probably won't get
-answered here.
-
-<br/>
 <br/>
 
 ## Reporting a Bug
 
-If you've found a bug, or something confusing about MyCrypto, here's what you
-should do:
-
-1. **Search for your issue** - If you're experiencing something, the chances are
-    good that someone else is too. Search the issue queue or our
-    [Knowledge Base](https://support.mycrypto.com/) before posting. You may even find an
-    answer to your problem!
-2. **Describe the issue in detail** - Instead of describing something as "not
-    working" or being "broken", explain what you expected to happen, and what's
-    happening instead, or just not happening.
-3. **Provide console logs** - Every browser has the ability to view logs from
+1. **Search for your issue** - If you're experiencing an issue, it's likely 
+    someone else is too. Search the issue queue or our
+    [Knowledge Base](https://support.mycrypto.com/) to see if you can find the
+    answer to your problem first.
+2. **Describe the issue in detail** - Explain what you were doing when the
+   issue happened, what you expected to happen what's happening instead, or
+   what is just not happening. Please include relevant information about your
+   machine and operating system. 
+3. **Console logs & screenshots** - Every browser has the ability to view logs from
     Javascript, which is where many error messages will get displayed if
     there's a bug in the code. Here's how in [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Console),
     [Chrome](https://developers.google.com/web/tools/chrome-devtools/console/),
     [Internet Explorer](https://msdn.microsoft.com/en-us/library/dn255006(v=vs.85).aspx),
     [Microsoft Edge](https://docs.microsoft.com/en-us/microsoft-edge/devtools-guide/console),
     and [Safari](https://www.wickedlysmart.com/hfjsconsole/). You'll want to
-    provide us with as many of the logs as possible, especially anything in red.
-4. **Provide browser information** - Let us know what operating system, browser,
-    browser version, and mobile device (if applicable.) This will help us debug
-    your issue on an identical device.
+    provide us with as many of the logs as possible, especially anything in red. 🙇
 
-Following the above steps will ensure that your bug is addressed in a timely and
-efficient manner. Thanks for keeping MyCrypto bug free!
+Thanks for keeping MyCrypto bug free!
 
 
 <br/>
@@ -66,9 +43,9 @@ If there's a feature that you think would make MyCrypto a better product, we
 want to know. Here's the best way to do it:
 
 1. **Search for your suggestion** - If you've thought of a good new feature,
-    chances are someone else may have too. To consolidate issues, we'll keep
-    feature requests in one thread. Show your support for a request by using
-    the thumbs up response on the Github issue.
+    perhaps other's have too. To consolidate issues, we'll keep
+    feature requests in one thread. Show your support for a request by adding
+    your thoughts to existing feature requests.
 2. **Describe your suggestion** - Describe, in detail, how you would want this
     new feature to work. If something doesn't work very well, it helps to know
     the pain points. If you have an idea of how to make it better, feel free to
@@ -129,18 +106,11 @@ Here are some suggestions for diving in:
 
 ### Read the Documentation
 
-Make sure you read the entire Readme to understand some basics about the project
+Make sure you read the readme to understand some basics about the project
 and how to run it. You can also check out our
 [style guide](https://github.com/MyCryptoHQ/MyCrypto/wiki/Style-Guides) for how
-to write code that matches the way we write things.
-
-
-### Find a Good First Issue
-
-If this is your first time contributing to MyCrypto, you'd probably do well to
-start small. We often mark good tasks for this on our issue queue with the
-"good first issue" label. You can find those
-[over here](https://github.com/MyCryptoHQ/mycrypto/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+to write code that matches the way we write things. *Note: this is somewhat out
+of date.*
 
 ### Make an Issue First
 
@@ -151,22 +121,21 @@ that may change. Likewise, it will prevent someone else from working on the same
 issue as you. Pull requests against an existing issue have a much higher chance
 of getting merged.
 
-### Write Unit Tests
+### Write Relevant Tests
 
 If your changes touch the more structural parts of the codebase, you'll be asked
-to write tests for them, and make sure the existing tests pass. Detailed
-documentation of writing and running tests is forthcoming, but for now, just try
-to follow the example of existing tests.
+to write tests for them, and make sure the existing tests pass. Try to follow the
+example of existing tests.
 
 ### Make a Detailed Pull Request
-
-Make sure you follow the format of a new pull request, where applicable. You'll
-want to:
 
 * Provide a detailed explanation for what your code does
 * List all of the high-level technical changes you've made
 * Provide a list of steps for testing your change (if applicable)
 * Provide screenshots / gifs of the visual changes (if applicable)
 
-Pull requests that have the above information are much more likely to be
-accepted.
+---
+
+Again, if you want to talk before you start coding away, feel free to join 
+our [Discord](https://discordapp.com/invite/VSaTXEA)!
+
