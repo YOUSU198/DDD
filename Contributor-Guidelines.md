@@ -11,6 +11,46 @@ If you have a critical or security-related issue, please reach out to us via a m
 
 <br/>
 
+## Contributing Code
+
+If you're a developer looking to pitch in, you're more than welcome to help out.
+Here are some suggestions for diving in:
+
+### Read the Documentation
+
+Make sure you read the readme to understand some basics about the project
+and how to run it. You can also check out our
+[style guide](https://github.com/MyCryptoHQ/MyCrypto/wiki/Style-Guides) for how
+to write code that matches the way we write things. *Note: this is somewhat out
+of date.*
+
+### Make an Issue First
+
+Before you dive into coding your change, it's often good to first make an issue,
+or work on an existing issue before you start. This will allow anyone to provide
+feedback about what you're going to work on before you spend time on something
+that may change. Likewise, it will prevent someone else from working on the same
+issue as you. Pull requests against an existing issue have a much higher chance
+of getting merged.
+
+### Write Relevant Tests
+
+If your changes touch the more structural parts of the codebase, you'll be asked
+to write tests for them, and make sure the existing tests pass. Try to follow the
+example of existing tests.
+
+### Make a Detailed Pull Request
+
+* Provide a detailed explanation for what your code does
+* List all of the high-level technical changes you've made
+* Provide a list of steps for testing your change (if applicable)
+* Provide screenshots / gifs of the visual changes (if applicable)
+
+Again, if you want to talk before you start coding away, feel free to join 
+our [Discord](https://discordapp.com/invite/VSaTXEA)!
+
+<br />
+
 ## Reporting a Bug
 
 1. **Search for your issue** - If you're experiencing an issue, it's likely 
@@ -92,50 +132,4 @@ it.
 
 If you follow the steps above, we'll be sure to provide your translations to all
 of our users. Thanks a for helping out your fellow language speakers!
-
-
-<br/>
-<br/>
-
-
-
-## Contributing Code
-
-If you're a developer looking to pitch in, you're more than welcome to help out.
-Here are some suggestions for diving in:
-
-### Read the Documentation
-
-Make sure you read the readme to understand some basics about the project
-and how to run it. You can also check out our
-[style guide](https://github.com/MyCryptoHQ/MyCrypto/wiki/Style-Guides) for how
-to write code that matches the way we write things. *Note: this is somewhat out
-of date.*
-
-### Make an Issue First
-
-Before you dive into coding your change, it's often good to first make an issue,
-or work on an existing issue before you start. This will allow anyone to provide
-feedback about what you're going to work on before you spend time on something
-that may change. Likewise, it will prevent someone else from working on the same
-issue as you. Pull requests against an existing issue have a much higher chance
-of getting merged.
-
-### Write Relevant Tests
-
-If your changes touch the more structural parts of the codebase, you'll be asked
-to write tests for them, and make sure the existing tests pass. Try to follow the
-example of existing tests.
-
-### Make a Detailed Pull Request
-
-* Provide a detailed explanation for what your code does
-* List all of the high-level technical changes you've made
-* Provide a list of steps for testing your change (if applicable)
-* Provide screenshots / gifs of the visual changes (if applicable)
-
----
-
-Again, if you want to talk before you start coding away, feel free to join 
-our [Discord](https://discordapp.com/invite/VSaTXEA)!
 
