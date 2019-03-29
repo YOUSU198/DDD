@@ -20,14 +20,14 @@ _Warning: These URLs are for **development purposes only** and should not be use
 
 - View builds based on a PR number rather than a commithash. Especially useful if wanting to test a PR with a stream of ongoing commits: `mycryptobuilds.com/pr/<number>`
 
-- Example: `https://mycryptobuilds.com/pr/2453`
+- Example: https://mycryptobuilds.com/pr/2453
 
 
 ### By Branch Name 
 
 - `mycryptobuilds.com/<branchname>`
 
-- Example: `https://mycryptobuilds.com/develop`
+- Example: https://mycryptobuilds.com/develop
 
 
 ### Build Logs 
