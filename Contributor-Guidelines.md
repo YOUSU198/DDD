@@ -2,19 +2,19 @@ Thanks for showing interest in contributing to MyCrypto! Here are some tips that
 hopefully helpful.
 
 Github is primarily for developers and is mostly monitored by MyCrypto developers. 
-If you need assistance using our product or simply want to chat with us:
+If you need help or support using our product or simply want to chat with us:
 
 - Email us at support@mycrypto.com
 - Join our [Discord](https://discordapp.com/invite/VSaTXEA)!
 
-If you have a critical or security-related issue, please reach out to us via a more private channel, like security@mycrypto.com or via HackerOne. 
+If you have a critical or security-related issue, please reach out to us via a more private channel, like security@mycrypto.com or via [HackerOne](https://hackerone.com/mycrypto). 
 
 <br/>
 
 ## Contributing Code
 
 If you're a developer looking to pitch in, you're more than welcome to help out.
-Here are some suggestions for diving in:
+Here are some suggestions:
 
 ### Read the Documentation
 
@@ -26,25 +26,27 @@ of date.*
 
 ### Make an Issue First
 
-Before you dive into coding your change, it's often good to first make an issue,
-or work on an existing issue before you start. This will allow anyone to provide
-feedback about what you're going to work on before you spend time on something
-that may change. Likewise, it will prevent someone else from working on the same
-issue as you. Pull requests against an existing issue have a much higher chance
-of getting merged.
+It's often good to make an issue first or work on an existing issue before you
+start. This will allow anyone to provide feedback about what you're going to
+work on before you spend time on something that may change. Likewise, it will
+prevent someone else from working on the same issue as you.
 
 ### Write Relevant Tests
 
 If your changes touch the more structural parts of the codebase, you'll be asked
 to write tests for them, and make sure the existing tests pass. Try to follow the
-example of existing tests.
+example of existing tests or chat with us if you need help determining what tests
+to write or how to write them.
 
-### Make a Detailed Pull Request
+### Make a Pull Request! 🎉 
 
 * Provide a detailed explanation for what your code does
 * List all of the high-level technical changes you've made
 * Provide a list of steps for testing your change (if applicable)
 * Provide screenshots / gifs of the visual changes (if applicable)
+
+This helps us quickly understand what the pull request does and allows us to test
+it and merge it faster.
 
 Again, if you want to talk before you start coding away, feel free to join 
 our [Discord](https://discordapp.com/invite/VSaTXEA)!
