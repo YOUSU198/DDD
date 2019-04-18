@@ -310,7 +310,7 @@
             - Check that the Question Mark links to the correct page: https://support.mycrypto.com/accessing-your-wallet/how-to-use-your-trezor-with-mycrypto.html 
 2. Verify that clicking Trezor will transition to the correct page
 3. Verify that you can go back to homepage with “Change Wallet” link in left corner
-4. Verify that the “Don’t have a TREZOR? Order one now” button works https://shop.trezor.io/?a=mycrypto.com
+4. Verify that the “Don’t have a TREZOR? Order one now” button works https://shop.trezor.io/?offer_id=10&aff_id=1735
 5. Verify that the “Connect to TREZOR” button works 
     - Once clicked, a window pops up asking to Export public key for Ether Account	
     - Ensure that the cancel button cancels request and closes the window
