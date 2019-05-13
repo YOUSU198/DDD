@@ -33,7 +33,7 @@
 **`layout` (required)**
 - The layout of the notification body
 
-**`showOneTime` (optional, false by default) **
+**`showOneTime` (optional, false by default)**
 - If true, the notification will be automatically dismissed after the user leaves or refreshes the page. If false, the notification will be displayed until it is dismissed.
 
 **`dismissOnOverwrite` (optional, false by default)**
