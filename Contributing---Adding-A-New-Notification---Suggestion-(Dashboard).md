@@ -1,12 +1,12 @@
-# HOW TO ADD A NEW NOTIFICATION
+# How to add a new notification
 
-## STEP 1:
+### Step 1
 
-- In directory "/v2/features/Dashboard/NotificationsPanel/components/", create a new component with the layout for the new notification. 
+- In directory `/v2/features/Dashboard/NotificationsPanel/components/`, create a new component with the layout for the new notification. 
 
 - If needed, use the NotificationWrapper component, which provides the basic layout for existing notifications (`/v2/features/Dashboard/NotificationsPanel/components/NotificationWrapper.tsx`)
 
-## STEP 2:
+### Step 2
 
 - Open `/v2/providers/NotificationsProvider/constants.ts` and Import the layout component that was created in step one.
 
@@ -25,7 +25,7 @@
 }
 ```
 
-List of parameters to use in the notification configuration:
+### List of parameters to use in the notification configuration:
 
 **`analyticsEvent` (required)**
 - Name of the event that will be tracked in the analytics when the notification is displayed
@@ -53,16 +53,16 @@ List of parameters to use in the notification configuration:
 
 
 
-# HOW TO DISPLAY A NOTIFICATION
+# How to display a notification
 
 Notifications can be added using the `displayNotification()` function that is part of the `NotificationsContext`.
 
 ### `displayNotification()` takes two arguments:
 
-1. `templateName` (required)
+1. **`templateName` (required)**
 - template name of your notification (NotificationTemplates in "/v2/providers/NotificationsProvider/constants.ts")
 
-2. `templateData` (optional)
+2. **`templateData` (optional)**
 - An object that contains any additional data for your notification. Values in the templateData will be automatically passed to your notification layout component as props.
 - Note: templateData is saved in local storage, therefore no sensitive info should be stored here.
 
@@ -82,8 +82,8 @@ Notifications can be added using the `displayNotification()` function that is pa
 
 ### Using `displayNotification()` with repeating notifications:
 
-- When displayNotification() is called for the first time, the repeating notification will be displayed instantly.
-- After that, the notification will be only triggered after the set period of time (even if displayNotification is called in the meantime).
+- When `displayNotification()` is called for the first time, the repeating notification will be displayed instantly.
+- After that, the notification will be only triggered after the set period of time (even if `displayNotification` is called in the meantime).
 
 
 
