@@ -57,7 +57,7 @@
 
 Notifications can be added using the `displayNotification()` function that is part of the `NotificationsContext`.
 
-### `displayNotification()` takes two arguments:
+`displayNotification()` takes two arguments:
 
 1. **`templateName` (required)**
 - template name of your notification (NotificationTemplates in "/v2/providers/NotificationsProvider/constants.ts")
