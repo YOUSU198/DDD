@@ -1,9 +1,8 @@
 WORK IN PROGRESS. This will eventually be updated for all new GAU flows. Currently it is still the legacy stuff that we are using as a base.
 
 ---
-## Page Flow Diagram
-* Start Page
-![Start Page Workflow](https://github.com/TheMyCryptoCrew/wiki-images/images/entry-page-workflow-diagram.png)
+## Page Flow Diagrams
+
 
 ---
 ## View & Send Tab:
