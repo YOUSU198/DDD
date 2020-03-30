@@ -38,6 +38,10 @@ to write tests for them, and make sure the existing tests pass. Try to follow th
 example of existing tests or chat with us if you need help determining what tests
 to write or how to write them.
 
+### Make your code translatable
+
+If you are adding any new strings to the codebase which are shown to the user, please make sure those strings are translatable, using [this guide](https://github.com/MyCryptoHQ/MyCrypto/wiki/Contributing---Translatable-strings).
+
 ### Make a Pull Request! 🎉 
 
 * Provide a detailed explanation for what your code does
