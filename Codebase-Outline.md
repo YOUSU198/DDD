@@ -1,5 +1,10 @@
+### MyCrypto Overview:
+The goal of MyCrypto is to act as a multi-account interface for Ethereum nodes. Almost all data in the app is fetched directly from an Ethereum node (we use ethers.js to facilitate client-side load balancing and failover). In order to decrease infrastructure requirements, we have implemented some caching layers over certain data (primarily data that is time consuming to fetch from the node such as Decentralized Finance data and historical information). In instances where thousands of API calls would normally be required to fetch mass amounts of data from the node (such as when fetching erc20 token balances), we have opted to use a smart contract to aggregate read calls instead.
+
 ### General Outline & Tools:
 The MyCrypto codebase is a React & Typescript front-end webapp and electron app. It utilizes Webpack and Babel for builds, Jest and Testcafe for unit, integration, and e2e tests, Storybook for UI/component development, and Styled Components for component styling syntax
+
+To learn how to build development & production builds as well as required downloads, look at the [README](https://github.com/MyCryptoHQ/MyCrypto#mycrypto-beta-web-app) for most up-to-date information.
 
 ### Folder structure:
 ```
