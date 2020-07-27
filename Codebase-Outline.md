@@ -1,5 +1,5 @@
 ### General Outline & Tools:
-The MyCrypto codebase is a React & Typescript front-end webapp. It utilizes Webpack and Babel for builds, Jest and Testcafe for unit, integration, and e2e tests, Storybook for UI/component development, and Styled Components for component styling syntax
+The MyCrypto codebase is a React & Typescript front-end webapp and electron app. It utilizes Webpack and Babel for builds, Jest and Testcafe for unit, integration, and e2e tests, Storybook for UI/component development, and Styled Components for component styling syntax
 
 ### Folder structure:
 ```
