@@ -227,4 +227,4 @@ PR reviews
 
 Atomic commits: https://dev.to/cbillowes/why-i-create-atomic-commits-in-git-kfi
 
-Releases
+[Releases](https://www.notion.so/Releases-38e5c6ee3b26409cbb14d0c479ea1371)
