@@ -74,11 +74,11 @@ Activate the rules in your IDE for auto-correction.
 ## Typescript
 We use TS and attempt to stay up to date with the latest version.
 
-Place shared typings in `@types`
+**1. Place shared typings in `@types`**
 
 Whenever a type is shared place it in the `@types` directory. It will allow us to determine which types to place as globals.
 
-Favour type composition over redefinition
+**2. Favour type composition over redefinition**
 
 It emphasises the relation between the types. Read `utility-types` to discover the helpers.
 
@@ -110,9 +110,9 @@ interface Asset {
 type ISwapAsset = Omit<Asset, 'decimal'>
 ```
 
-Use `Brand<>` types for strings
+**3. Use `Brand<>` types for strings**
 
-It allows type safety for strings that we can’t enumerate like uuid, address, symbol etc.
+It allows type safety for strings that we can’t enumerate like `uuid`, `address`, `symbol` etc.
 ```
 /* Don't */
 interface Account {
@@ -129,7 +129,7 @@ interface Account {
 }
 ``` 
 
-Use `React.ComponentProps<>` to access a components props So we can reduce the amount of imports
+**4. Use `React.ComponentProps<>` to access a components props So we can reduce the amount of imports**
 ```
 /* Don't */
 // Selector.tsx
@@ -176,11 +176,11 @@ const SContainer = styled('div')`
 ```
 
 ## Naming
-Rule: Prefix exported types
+1. **Rule**: Prefix exported types
 
-Rationale: Facilitate maintenance by making them searchable.
+**Rationale**: Facilitate maintenance by making them searchable.
 
-Example:
+**Example**:
 
 ```
 // Don't
@@ -192,11 +192,11 @@ interface SwapAssets {}
 interface TSwapAssets {}
 ```
 
-Rule: Prefix SC components with S
+2. **Rule**: Prefix SC components with S
 
-Rationale: When parsing JSX it's useful to know what is an SC
+**Rationale**: When parsing JSX it's useful to know what is an SC
 
-Example:
+**Example**:
 
 ```
 // Don't
