@@ -10,7 +10,8 @@ Keep to the ordered format for imports as follows:
 1) External module imports
 2) Absolute imports (Use the `@` operator to reference things in the `/src` directory)
 3) Relative imports
-ex.
+
+ex:
 ```js
 import React from 'react';
 import { Heading } from '@mycrypto/ui';
