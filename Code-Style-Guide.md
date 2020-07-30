@@ -1,3 +1,5 @@
+When contributing new code to the codebase, please follow the following code style guide for consistency and continued ease-of-maintenance! Thank you for your help! :rocket: 
+
 # Table of Contents
 1. [Imports](#imports)
 1. [ToDos](#todos)
