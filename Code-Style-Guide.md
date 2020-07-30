@@ -18,7 +18,7 @@ When contributing new code to the codebase, please follow the following code sty
 ## Imports
 Keep to the ordered format for imports as follows:
 1) External module imports
-2) Absolute imports (Use the `@` operator to reference things in the `/src` directory)
+2) Absolute imports (Use the `@` alias to reference things in the `/src` directory)
 3) Relative imports
 
 ex:
@@ -44,15 +44,9 @@ A collection of conventions we follow when coding for core
 
 
 ## Code
-Prefer pure functions
+**1. Prefer pure functions**
 
-Isolate side effects
-
-
-Rule
-Example
-Rational
-
+**2. Isolate side effects**
 
 ## File structure
 Review [Codebase Outline](https://github.com/MyCryptoHQ/MyCrypto/wiki/Codebase-Outline)
