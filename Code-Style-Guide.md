@@ -1,3 +1,5 @@
+A collection of conventions we follow when coding for core
+
 When contributing new code to the codebase, please follow the following code style guide for consistency and continued ease-of-maintenance! Thank you for your help! :rocket:
 
 # Table of Contents
@@ -36,15 +38,9 @@ import { actions } from "./constants";
 import "./Dashboard.scss";
 ```
 
-## Libraries
-
-Please avoid adding new libraries. If you do add one, please note it in your PR and a short description of what it is used for so that the person reviewing has a simple time understanding what it is/what it is used for.
-
 ## ToDos
 
 If you add a ToDo somewhere in the code, please use the format `@todo: <explanation>` so it's easily-searchable in the future.
-
-A collection of conventions we follow when coding for core
 
 ## Code
 
@@ -71,6 +67,8 @@ return {
   ...(isTrue && { key: <value> })
 }
 ```
+
+**4. Avoid nested conditionnels**
 
 ## File structure
 
@@ -175,6 +173,17 @@ import { Selector } from '@components'
 const AssetSelector = (props: Pick<React.ComponentProps<Selector>, 'whatever' | 'you' | 'need'>) => (...)
 ```
 
+**5. Use `unknown` over `any` (since TS 3.0).**
+
+`unknown` is safer than `any` since it reminds us that we need to perform some sorts of type-checks before operating on our values.
+[https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/#unknown-on-catch](https://devblogs.microsoft.com/typescript/announcing-typescript-4-0/#unknown-on-catch)
+
+**6. Use 4.0.0 assignment operators**
+`&&=, ||=` and `??=`
+
+**7. Use discriminate unions**
+https://basarat.gitbook.io/typescript/type-system/discriminated-unions
+
 ## Styles
 
 Currently there is a mix between `.css`, `.scss`, and `style` components.
@@ -238,20 +247,49 @@ const SPrice = styled(Currency)``
 
 ## Testing
 
-Use `Jest` watch mode when you code.
+- For unit and functional tests we use `jest, jsDom, react-testing-library`.
+- For E2E tests we use Testcafe and Ganache.
 
-## Dependencies
+1. Use `Jest` watch mode when you code.
+2. Test a page redirect with `history.push` see `MigrateLS`. eg. How to spy on a dependency called within an effect.
+3. Test input. eg. `AssetSelector`
+4. Test absence of element in DOM. eg. `Downloader`
 
-Prefer hooks
+### Ressources
 
-Prefer `ramda` over `lodash` _(Import the method rather then the default [to decrease bundle size])_
+- Intro to rtl https://kentcdodds.com/blog/introducing-the-react-testing-library/
+- Write fewer longer tests. https://kentcdodds.com/blog/write-fewer-longer-tests
+- Understand `act`. https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning
+- Avoid common mistakes when writing tests. https://kentcdodds.com/blog/common-mistakes-with-react-testing-library#not-using-screen
 
-Prefer `datefns` over `moment`
+## Libraries and project dependencies
+
+Please avoid adding new libraries. If you do add one, please note it in your PR and a short description of what it is used for so that the person reviewing has a simple time understanding what it is/what it is used for.
+
+- bundle bloat: can the library tree-shake?
+- duplication: is there a dep with similar functionnality wihtin the project?
+- security: is the dep recent and has a sufficient amount of contributors to not become a supply-chain attack vector?
+
+With that in mind:
+
+1. Use react libraries that offer hooks. It simpler to use then overriding default styles
+2. Use `ramda` over `lodash` _(Import the method rather then the default [to decrease bundle size])_
+3. Use `datefns` over `moment`
 
 ## Version control
 
-PR reviews
+- PR reviews
+- Atomic commits: https://dev.to/cbillowes/why-i-create-atomic-commits-in-git-kfi
 
-Atomic commits: https://dev.to/cbillowes/why-i-create-atomic-commits-in-git-kfi
+## Releases
 
-[Releases](https://www.notion.so/Releases-38e5c6ee3b26409cbb14d0c479ea1371)
+e.g. [Release Process](https://www.notion.so/Releases-38e5c6ee3b26409cbb14d0c479ea1371)
+
+# Glossary
+
+A List of common abbreviations used in the codebase and in our communication
+
+- Tx | TX | tx: transaction
+- MM: Metamask
+- GHA: Github Actions
+- Web3: corresponds to all web3 compatible wallets ie. Trust, MM.
