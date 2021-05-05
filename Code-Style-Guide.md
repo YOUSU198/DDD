@@ -20,13 +20,13 @@ When contributing new code to the codebase, please follow the following code sty
 
 ## Imports
 
-Keep to the ordered format for imports as follows:
+  1. Keep to the ordered format for imports as follows:
 
-1. External module imports
-2. Absolute imports (Use the `@` alias to reference things in the `/src` directory)
-3. Relative imports
+     i. External module imports
+     ii. Absolute imports (Use the `@` alias to reference things in the `/src` directory)
+     iii. Relative imports
 
-ex:
+  ex:
 
 ```js
 import React from "react";
@@ -38,9 +38,14 @@ import { actions } from "./constants";
 import "./Dashboard.scss";
 ```
 
-## ToDos
+  2. `@utils` and `@components` may only import from `@config, @types, @vendor`.
 
-If you add a ToDo somewhere in the code, please use the format `@todo: <explanation>` so it's easily-searchable in the future.
+     Circular dependencies are caused by import loops eg. `A -> B -> C -> A`. They are painful to debug.
+     We avoid them by respecting import hierarchy.
+
+## Notes and comments
+
+   1. If you add a ToDo somewhere in the code, please use the format `@todo: <explanation>` so it's easily-searchable in the future.
 
 ## Code
 
@@ -69,6 +74,12 @@ return {
 ```
 
 **4. Avoid nested conditionnels**
+  It's the Sandi Metz [squint test](https://www.youtube.com/watch?v=8bZh5LMaSmE)
+
+**5. Prefer arguments as object keys**
+  If a function has 3 or more arguments, prefer passing them as object keys.
+  It facilitates maintainability by avoiding argument order dependency. 
+
 
 ## File structure
 
@@ -244,6 +255,17 @@ const Price = styled(Currency)``
 const SWrapper = styled.div``
 const SPrice = styled(Currency)``
 ```
+
+## State Management
+
+1. Use redux and sagas when relevant.
+   They are simpler to test, particularly in regards to side-effects.
+
+2. Reuse selectors.
+   Most selectors already exist.
+   Encourage reuse.
+
+3. `actions, selectors, reducers` are keywords reserved for redux.
 
 ## Testing
 
